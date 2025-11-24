@@ -1,0 +1,99 @@
+/*Titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+/*Parrafos y titulos secundarios*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+/*Botones y formularios*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=News+Cycle:wght@400;700&family=Permanent+Marker&display=swap');
+
+:root{
+    --color-fondo: #57277B;
+    --color-secundario: #2F0B4A;
+}
+/*Estilos generales al body*/
+body {
+    width: 100%;/*width: 1512px;*/
+    background-color: var(--color-fondo);
+    font-family: 'Archivo Narrow', sans-serif;
+    color: white;
+}
+/*header*/
+h1 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size:3em;
+    margin-bottom: 1.32%;/*20px;*/
+}
+
+/*Formulario
+Tenemos 1512px para usar decidimos que el formulario coger 440
+440-40=400 usables
+*/
+form {
+    margin: 0 auto;
+    width: 26.45%; /*400px. 400*100 / 1512px = 26,45%*/
+    background-color: var(--color-secundario);
+    padding: 5%; /* 20*100/400= 5 */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /*SOMBREADO*/
+    text-align: center;
+}
+
+form h1 {
+    color: white;
+    margin-bottom: 12.5%; /*50*100/400=12,5 */
+    font-size:2em;
+}
+
+/*La imagen del logo hemos decido que cogeremos 150px de los 1512px usable ya que es un tamaño
+visualmente decente ni mmuy grande ni pequeña*/
+img {
+    width: 6.61%; /*100*100/1512px = 6,61%*/
+    height: auto;
+    display: block;
+    margin: 0 auto 1.32%; /* 20*100/1512px= 1,32%*/
+    padding-top: 1.98%; /*30*100/1512px= 1,98*/
+}
+
+/* Etiquetas pertenecientes al formulario*/
+label {
+    display: block;
+    margin-bottom: 2.5%; /* 10*100/400= 2,5*/
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 80%; /*320*100/400(form) = 80*/
+    margin: 0 auto 30px;
+    padding: 2.5% 0; /*10*100/400=2.5*/
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/*submbit de enviar: este por defecto tiene la propiedad box-sizing:border-box por eso debemos usar el total
+que es 320+25+25= 370*/
+input[type="submit"] {
+    width: 80%;/*320*100/400= 80*/
+    background-color: #FF69B4;
+    color: #2F0B4A;
+    border: none;
+    border-radius: 15px;
+    padding: 3% 0; /*12*100/400=3 | 25*100/400 = 6,25*/
+    margin-top:12.5%; /*50px;*/
+}
+
+input[type="submit"]:hover {
+    background-color: #ff85c1;
+}
+
+/*Pie de pagina*/
+footer {
+    width: 100%;
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 1.32% 0; /*20*100/1512px= 1,32*/
+    margin-top: 40px;
+}
