@@ -36,6 +36,51 @@ h3 {
     font-family: "Archivo Narrow";
 }
 
+.subtitle {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.rojo{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.verde{
+    background-color: green;
+}
+.amarillo{
+    background-color: yellow;
+}
+
+.morado{
+    background-color: #57277B;
+}
+
+.rosa{
+    background-color: pink;
+}
+
+.naranja{
+    background-color: #FF7F00;
+}
+.cyan{
+    background-color: #00FFFF;
+}
+.lima{
+    background-color: #32CD32;
+}
+.coral{
+    background-color: #FF7F50;
+}
+.indigo{
+    background-color: #4B0082;
+}
+.ocre{
+    background-color: #CC7722;
+}
+
 /*----------------------------------Selección de Preguntas--------------------------------------*/
 
 .pregunta-container {
@@ -105,27 +150,10 @@ h3 {
     background-color: red;
 }
 
-#rojo{
-    background-color: red;
-}
-#azul{
-    background-color: blue;
-}
-#verde{
-    background-color: green;
-}
-#amarillo{
-    background-color: yellow;
-}
+
 
 
 /*----------------------------------Gestion de Usuarios--------------------------------------*/
-
-.subtitle {
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-}
 
 .form-box {
     background-color: #F5F5F5;
@@ -153,7 +181,7 @@ h3 {
     }
 }
 
-.create-btn {
+.save-btn {
     background-color: #57277B;
     color: white;
     width: 100%;
@@ -166,7 +194,7 @@ h3 {
     transition: 0.3s;
 }
 
-.create-btn:hover {
+.save-btn:hover {
     background-color: #6a359c;
 }
 
@@ -204,3 +232,72 @@ h3 {
         color: #57277B;
     }
 }
+
+/*-----------------------------------Creación de Juego-----------------------------------------*/
+.form-box{
+    #checkbox-publico {
+        float: right;
+        width: 3.1948881789137380191693290734824%; /*20*100/626*/
+    }
+}
+
+.temas-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    gap: 2.3961661341853035143769968051118%; /*15*100/626*/ 
+    width: 100%;
+}
+
+.tema-item{
+    width: 100%;
+    background-color: #57277B;
+    color:white;
+    border-radius: 10px;
+    transition: transform 0.3s  ease;
+    cursor: pointer; 
+    line-height: 40px;
+    font-size: 0.875rem;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.tema-item:hover {
+    transform: scale(1.05);
+}
+
+#cancel{
+    background-color: rgb(169, 27, 27);
+}
+
+#cancel:hover{
+    background-color: rgb(214, 49, 49);
+}
+
+.buttons-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+/* 
+.color{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s  ease;
+    cursor: pointer;
+}
+
+.color:hover{
+    transform: scale(1.05);
+    border: 2px solid #2F0B4A;
+}
+
+.colors-box{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 10px;
+} */
