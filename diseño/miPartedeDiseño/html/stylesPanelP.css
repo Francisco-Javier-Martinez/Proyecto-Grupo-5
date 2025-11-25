@@ -1,0 +1,238 @@
+
+/* Titulos */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+
+/* Parrafos y titulos secundarios */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..400&display=swap');
+
+/* Botones y formularios */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=News+Cycle:wght@400;700&family=Permanent+Marker&display=swap');
+
+:root{
+    --color-fondo: linear-gradient(to bottom right, #000000, #2F0B4A);
+    --color-secundario: #2F0B4A;
+    --color-boton: #7943A4;
+}
+/*Recalco si alguien de mi grupo esta apunto de leer mi codigo que la anidacion primero
+pongo los estilos y luego ya los demas*/
+
+body{
+    width: 100%; /*1512 es el 100%*/
+    min-height: 100vh;
+    font-size: 16px; /* Base para em */
+    background: var(--color-fondo);
+    color: white;
+    margin: 0 auto;
+    /*Para que no se reita el degradado*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*Maquetar con grid*/
+    display: grid;  
+    /*grid template de 4 filas y 1 columna*/
+    grid-template-columns: 100% 100% 100% 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "Encabezado"
+        "MenuNavegacion"
+        "Principal"
+        "PiePagina";
+
+}
+/*Layaout y sus estilos */
+/* Header */
+header {
+    position: relative;
+    width: 98.67%;/*1492*100/1512=98,67*/
+    grid-area: Encabezado;
+    align-items: center;
+    padding: 0.66%; /*10*100/1512=0,66*/
+    background-color: rgb(10, 8, 82);
+}
+/*218.89 es lo que ocupa de ancho el h1*/
+header{
+    h1{
+        position: absolute;
+        top:50%;/*En el medio*/
+        left:43.22%; /*636.55*100/1512=43,22*/
+        /*los 1512-20(paddig) = 1492/2=746
+        pero como el h1 ocupa 218.89 de ancho realmente
+        para que quede centrado le resto la mitad 109.44
+        operacionalmente 746-109.44=636.55px*/ 
+        text-align: center;
+        margin: auto;
+        font-family: "Bitcount Grid Single";
+        font-size: 2em; 
+    }
+}
+/*Menu de navegacion*/
+nav{
+    grid-area: MenuNavegacion;
+    ul{
+        list-style: none;
+        display: flex; /*Aqui uso un flex para la organizacion del 
+        los elementos del nav
+        */
+        padding: 0;
+        margin: 0;
+        li{
+            /*he decido usar 250px si yo no usase el flex-grow y flex-shrink
+            solo me cabería 6 elementos li en el nav 250*6=1500px uno mas y me pasaria*/
+            flex-basis: 16.53%; 
+            /*250*100/1512=16,53*/
+            /*el flex basis es el width*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            a{
+                background-color: rgb(10, 8, 82);
+                /* ... propiedades existentes ... */
+                margin: 0;
+                padding: 0; /* Asegúrate de que no haya padding si no lo quieres */
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white; 
+                font-size: 1.5em;
+                display: block;
+                /*tenia problemas de como se veia el texto en los enlaces del nav al agrandar
+                y busque como solucionarlo y vi que con el white-space nowrap puedo
+                decirle que omita los saltos de linea y asi no se me lia*/
+                white-space: nowrap;
+                &:hover{ 
+                    background-color: #3b5f77;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+/*Cuerpt*/
+main{
+    grid-area: Principal;
+}
+main{
+    h1{
+        font-family: "Bitcount Grid Single";
+        text-align: center;
+    }
+}
+
+/*Pie de pagina*/
+footer{
+    grid-area: PiePagina;
+    background-color: #000000;
+    margin-top:1.32% ;/*20*100/1512=1.32%*/
+    padding: 1.32%; /* 20*100/1512=1.32% */
+    text-align: center;
+    font-size: 2em; 
+}
+
+/*Estilos de la pagina que no es layaot*/
+/* Imágenes */
+#logo {
+    width: 5.55%; /*83.92*100/1512=5,55*/
+}
+
+/* Tarjetas (6 columnas, 226px cada una) */
+/*226*6=1356px+30px*5(gap)=150px esto es 1506px total cabe en 1512px me sobran unos 6px*/
+#tarjetas {
+    display: grid;
+    grid-template-columns: repeat(6, 15%);  /* 226*100/1512 = 14.94%  voy a redondear a 15 por los 6 que me sobraron*/
+    gap: 1.98%; /* 30*100/1512 = 1.98% */
+}
+
+/* Contenedor de la Tarjeta: 226px de base */
+.contenedorEtiqueta {
+    margin: 0; 
+    padding: 8.84%; /* 20*100/226 = 8.84% */
+    background-color: #2F0B4A;
+    border-radius: 10px;
+    &:hover{
+            background-color: #391a50;
+    }
+}
+
+.encabezadoTarjeta h3{ 
+    float: left;
+    margin: 0;
+    /*Por defecto el h3 ocupa de ancho un 48.33 lo vi con el f12 
+    me sobra 48.33-226=177.67 para usar pero yo no quiero que ocupe todo
+    asiq ue para el estado de juego le indico que tenga un ancho de 100px*/
+}
+/* Base de cálculo para elementos internos: 226px */
+.estadoJuego{
+    float: right;
+    background-color: rgb(134, 193, 241);
+    width: 44.24%; /* 100*100/226 = 44.24% */
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Archivo Narrow", sans-serif;
+    margin: 2.21%; /* 5*100/226 = 2.21% */
+    padding: 2.21% 0; /* 5*100/226 = 2.21% */
+}
+
+
+/* tengo 226px para usar */
+.contenedorTemas{
+    clear: both;
+    padding: 6.63% 0; /* 15*100/226 = 6.63% */
+    display: grid;/*decido poner dos columnas de 85px cada una (85*2=170)
+    y un gap de 20px (170+20=190) me sobran 30px*/
+    /*170= 85*100/226 = 37.61% */
+    grid-template-columns: 37.61% 37.61%;
+    /* 20*100/226 = 8.84% */
+    gap: 8.84%;
+}
+
+
+.contenedorTemas>div{
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contenedorTemas>div:nth-child(even){
+    background-color: royalblue;
+}
+.contenedorTemas>div:nth-child(odd){
+    background-color: rgb(240, 129, 221);
+}
+
+
+
+/*Estilo de ver datos */
+/*Formulario*/
+/* Etiquetas: #formulario label */
+#formulario {
+    background-color: var(--color-secundario);
+    padding: 2.64% 3.31%; /* 40*100/1512=2.64% | 50*100/1512=3.31% */    border-radius: 20px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    width: 23.15%; /* 350*100/1512=23.15% */
+    border: 1px solid var(--color-borde);
+}
+#formulario{
+    label {
+        display: block;
+        margin-bottom: 1.43%; /* 5*100/350=1.43%*/
+        font-weight:bold;
+        font-size: 0.9em;
+        font-family: "Archivo Narrow", sans-serif; 
+    }
+    input{
+        width: 90%;/*315*100/350=90*/
+        padding: 3.43% 4.29%; /* 12*100/350=3.43% | 15*100/350=4.29% */
+        margin-bottom: 7.14%; /* 25*100/350=7.14% */
+        border-radius: 8px;
+        border: 1px solid var(--color-borde);
+        font-size: 1.1em;
+        background-color: rgba(0, 0, 0, 0.3); 
+    }
+    a{
+        color: rgb(105, 105, 243);
+        text-decoration: none;
+        &:hover{
+            color: red;
+            text-decoration: underline;
+        }
+    }
+}
