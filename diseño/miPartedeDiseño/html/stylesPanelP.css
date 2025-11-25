@@ -86,8 +86,6 @@ nav{
             a{
                 background-color: rgb(10, 8, 82);
                 /* ... propiedades existentes ... */
-                margin: 0;
-                padding: 0; /* Asegúrate de que no haya padding si no lo quieres */
                 display: block;
                 text-decoration: none;
                 text-align: center;
