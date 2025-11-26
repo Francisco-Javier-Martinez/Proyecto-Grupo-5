@@ -1,3 +1,4 @@
+/*FRANCISCO JAVIER MARTINEZ FERNADEZ*/
 /*Titulos*/
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
 
@@ -6,12 +7,11 @@
 
 /*Botones y formularios*/
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=News+Cycle:wght@400;700&family=Permanent+Marker&display=swap');
+/* Títulos principales */
 
 :root{
     --color-fondo: linear-gradient(to bottom right, #000000, #2F0B4A);
     --color-secundario: #2F0B4A;
-    --color-correcto: #2E8B57;
-    --color-boton: #7943A4;
 }
 
 /* Estilos Generales */
@@ -59,12 +59,11 @@ header p {
     margin: 0;
 }
 
-/* Títulos principales */
+/*Títulos principales*/
 h1, h2 {
     font-family: 'Permanent Marker', cursive; /* Fuente de títulos */
 }
-
-/* Bloques */
+/*Caja de falso o correcto*/
 #correctoFalso{
     width: 60.98%; /*500*100/820=60.98%*/
     background-color: #2E8B57;
@@ -73,7 +72,7 @@ h1, h2 {
     box-shadow: 3px 5px #2F0B4A;
     margin: 2.43% auto;/*20*100/820=2,43*/
 }
-
+/*Caja de explicacion*/
 #porquePregunta{
     width: 60.98%; /*500*100/820=60.98%*/
     margin: 0 auto;
