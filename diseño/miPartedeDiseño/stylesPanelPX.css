@@ -1,3 +1,4 @@
+/*FRANCISCO JAVIER MARTINEZ FERNADEZ*/
 /* Titulos */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
 
@@ -27,6 +28,8 @@ body{
     background-size: cover;
     /*Maquetar con grid*/
     display: grid;  
+    /* Fuente de párrafos y texto general */
+    font-family: 'Archivo Narrow', sans-serif;
     /*grid template de 4 filas y 1 columna*/
     grid-template-columns: 1512px 1512px 1512px 1512px;
     grid-template-rows: auto;
@@ -77,6 +80,7 @@ nav {
             flex-grow: 1;
             flex-shrink: 1;
             a{
+                font-family: 'News Cycle', sans-serif;
                 background-color: rgb(10, 8, 82);
                 text-decoration: none;
                 text-align: center;
