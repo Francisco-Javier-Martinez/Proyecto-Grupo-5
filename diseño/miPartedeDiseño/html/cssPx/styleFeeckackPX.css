@@ -1,0 +1,104 @@
+/*FRANCISCO JAVIER MARTINEZ FERNADEZ*/
+/*Titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+
+/*Parrafos y titulos secundarios*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+
+/*Botones y formularios*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=News+Cycle:wght@400;700&family=Permanent+Marker&display=swap');
+/* Títulos principales */
+
+:root{
+    --color-fondo: linear-gradient(to bottom right, #000000, #2F0B4A);
+    --color-secundario: #2F0B4A;
+}
+
+/* Estilos Generales */
+body {
+    width: 820px; /*820px*/
+    height: auto;
+    margin: auto;
+    background: var(--color-fondo); 
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    /* Fuente de párrafos y texto general */
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+/* Imágenes */
+img {
+    width: auto;
+    height: 60px; /*60*100/820=7,31*/
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /*20*100/8202.43%*/
+}
+
+/* Contenedor perfil */
+header div {
+    display: flex; /*le digo flex para que se ajuste como por defecto es row
+    no tengo que poner nada si no usase el flex se podria usar display inline block en 
+    los dos elementos*/
+    align-items: center;
+    gap: 10px;/*10*100/820=1.21%*/
+}
+
+header p {
+    font-family: 'Archivo Narrow', sans-serif; /* Texto secundario */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*Títulos principales*/
+h1, h2 {
+    font-family: 'Permanent Marker', cursive; /* Fuente de títulos */
+}
+/*Caja de falso o correcto*/
+#correctoFalso{
+    width: 500px; /*500*100/820=60.98%*/
+    background-color: #2E8B57;
+    padding: 20px;/*20*100/820=2,43*/
+    border-radius: 10px;
+    box-shadow: 3px 5px #2F0B4A;
+    margin: 20px auto;/*20*100/820=2,43*/
+}
+/*Caja de explicacion*/
+#porquePregunta{
+    width: 500px; /*500*100/820=60.98%*/
+    margin: 0 auto;
+    background-color: rgb(28, 80, 156);
+    padding: 20px;/*20*100/820=2,43*/
+    border-radius: 10px;
+    box-shadow: 3px 5px #2F0B4A;
+}
+
+/* Botones y enlaces */
+main a{
+    width: 520px; /*520*100/820=63.41%*/
+    display: block;
+    padding: 10px; /*10*100/820=1,21*/
+    background-color: rgb(57, 122, 243);
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2em;
+    margin: 20px auto;/*20*100/820=2,43*/
+    /* Fuente para botones y formularios */
+    font-family: 'News Cycle', sans-serif;
+}
+
+.boton:hover {
+    color: red;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #75aaff, #3a63f7);
+}
