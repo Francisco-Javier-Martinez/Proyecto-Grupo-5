@@ -15,10 +15,8 @@
 }
 /*Recalco si alguien de mi grupo esta apunto de leer mi codigo que la anidacion primero
 pongo los estilos y luego ya los demas*/
-
 body{
     width: 100%; /*1512 es el 100%*/
-    min-height: 100vh;
     font-size: 16px; /* Base para em */
     background: var(--color-fondo);
     color: white;
@@ -32,7 +30,7 @@ body{
     /*Maquetar con grid*/
     display: grid;  
     /*grid template de 4 filas y 1 columna*/
-    grid-template-columns: 100% 100% 100% 100%;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: 
         "Encabezado"
@@ -56,7 +54,10 @@ header{
     h1{
         position: absolute;
         top:50%;/*En el medio*/
-        left:43.22%; /*636.55*100/1512=43,22*/
+        /*para que quede perfecto uso left 50% y transform translate -50% -50%
+        que esto lo que hace es situar el punto central del h1 en el punto central de la pantalla*/
+        left:50%;
+        transform: translate(-50%, -50%);
         /*los 1512-20(paddig) = 1492/2=746
         pero como el h1 ocupa 218.89 de ancho realmente
         para que quede centrado le resto la mitad 109.44
@@ -138,14 +139,18 @@ footer{
 /*226*6=1356px+30px*5(gap)=150px esto es 1506px total cabe en 1512px me sobran unos 6px*/
 #tarjetas {
     display: grid;
+    /* 226 porque 6*226=1356 + 5*30(gap)=1506px asi que caben
+    esto sera el total pero usables seran 226-40(padding)=186px*/
     grid-template-columns: repeat(6, 15%);  /* 226*100/1512 = 14.94%  voy a redondear a 15 por los 6 que me sobraron*/
     gap: 1.98%; /* 30*100/1512 = 1.98% */
 }
 
-/* Contenedor de la Tarjeta: 226px de base */
+
+/* Contenedor de la Tarjeta: 226px total pero usabes 226-40(padding)=186px*/
 .contenedorEtiqueta {
+    width: 82.3%; /*186*100/226=82.3%*/
     margin: 0; 
-    padding: 8.84%; /* 20*100/226 = 8.84% */
+    padding: 8.84%;/*20*100/226=8.84%*/
     background-color: #2F0B4A;
     border-radius: 10px;
     &:hover{
@@ -173,16 +178,15 @@ footer{
 }
 
 
-/* tengo 226px para usar */
+/* tengo 226px-40(padding)=186 usables para usar para pasar las cajas
+de temas a  % debo usar 186px como base de calculo*/
 .contenedorTemas{
     clear: both;
-    padding: 6.63% 0; /* 15*100/226 = 6.63% */
-    display: grid;/*decido poner dos columnas de 85px cada una (85*2=170)
-    y un gap de 20px (170+20=190) me sobran 30px*/
-    /*170= 85*100/226 = 37.61% */
-    grid-template-columns: 37.61% 37.61%;
-    /* 20*100/226 = 8.84% */
-    gap: 8.84%;
+    padding: 6.64% 0; /*15*100/226=6.64% en este uso 226 porque el padding es externo a las cajas de tema*/
+    display: grid;
+    /* 186-208(gap)=166/2=83px */
+    grid-template-columns: 44.62% 44.62%; /*83*100/186=44.62%*/
+    gap: 10.75%; /*20*100/186=10.75% */
 }
 
 
@@ -205,11 +209,11 @@ footer{
 /* Etiquetas: #formulario label */
 #formulario {
     background-color: var(--color-secundario);
-    padding: 2.64% 3.31%; /* 40*100/1512=2.64% | 50*100/1512=3.31% */    border-radius: 20px; 
+    padding: 2.64% 3.31%; /* 40*100/1512=2.64% | 50*100/1512=3.31% */    
+    border-radius: 20px; 
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     width: 23.15%; /* 350*100/1512=23.15% */
-    border: 1px solid var(--color-borde);
 }
 #formulario{
     label {
@@ -219,14 +223,28 @@ footer{
         font-size: 0.9em;
         font-family: "Archivo Narrow", sans-serif; 
     }
+    /*el input total es 350px sale de 226px de la tarjeta + 40(padding de la tarjeta)=266 + 84(padding del formulario)=350px*/
     input{
+        /*315px usables 350-35(padding)=315px*/
         width: 90%;/*315*100/350=90*/
         padding: 3.43% 4.29%; /* 12*100/350=3.43% | 15*100/350=4.29% */
         margin-bottom: 7.14%; /* 25*100/350=7.14% */
         border-radius: 8px;
-        border: 1px solid var(--color-borde);
         font-size: 1.1em;
+        color: white;
         background-color: rgba(0, 0, 0, 0.3); 
+    }
+    input[type="submit"]{
+        /*a este le digo 100% porque por defeto el sumbit tiene 
+        box-sizing border-box y asi uso todo el ancho del input*/
+        width: 100%;/*350*100/350=100%*/
+        background-color: var(--color-boton);
+        color: white;
+        font-family: 'News Cycle', sans-serif;
+        font-weight: bold;
+        &:hover{
+            background-color: #5c2aa5;
+        }
     }
     a{
         color: rgb(105, 105, 243);
@@ -237,4 +255,8 @@ footer{
             text-decoration: underline;
         }
     }
+}
+/*informacion del p para el codigo que te llega al correto*/
+#infoCodigo{
+    text-align: center;
 }
