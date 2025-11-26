@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+/* ===========================
+   VARIABLES
+=========================== */
+:root{
+    --color-secundario: #57277B;
+    --color-tercero: #2F0B4A;
+    --color-cuarto: #293478;
+}
+
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+body {
+    margin: 0 auto;
+    width: 1512px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #2F0B4A);
+    font-family: "Archivo Narrow", sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+/* ---- ENCABEZADO ---- */
+
+header {
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 25px;
+}
+
+.boton-volver, .boton-guardar {
+    background: #cdd1d9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ---- CONTENIDO PRINCIPAL ---- */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.contenedor-principal {
+    width: 500px;
+    background: var(--color-tercero);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grupo-botones {
+    display: flex;
+    margin-bottom: 40px;
+    font-family: "News Cycle", sans-serif;
+}
+
+.grupo-botones button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: var(--color-cuarto);
+    color: #FFFFFF;
+    margin: 10px;
+    font-family: "News Cycle", sans-serif;
+}
+
+.lista-tarjetas {
+    display: grid;
+    width: 80%;
+}
+
+/* ---- TARJETAS ---- */
+
+.tarjeta {
+    background: var(--color-secundario);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.icono-borrar {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.titulo-tarjeta {
+    margin: 0;
+    font-weight: bold;
+}
+
+.autor-tarjeta {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+/* ===========================================================
+   NUEVOS ESTILOS PARA LA PÁGINA DE CREACIÓN DE TEMAS
+=========================================================== */
+
+/* --- Título principal --- */
+.contenedor-principal h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Bitcount Grid Single", sans-serif;
+}
+
+/* --- Etiquetas del formulario --- */
+.texto-label {
+    display: block;
+    text-align: left;
+    width: 400px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* --- Input de texto --- */
+.contenedor-principal input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 25px;
+    background: #ffffff;
+}
+
+/* --- Contenedor de opción de tema público --- */
+.publico-container {
+    width: 400px;
+    background: var(--color-secundario);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch-label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.switch-label .descripcion {
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+
+/* --- Textarea --- */
+.descripcion-tema {
+    width: 400px;
+    height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 15px;
+    resize: none;
+    background: #ffffff;
+}
+
+/* --- Botón final grande --- */
+.botonanadir {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--color-cuarto);
+    color: white;
+    transition: 0.2s;
+    font-family: "News Cycle", sans-serif;
+}
+
+/* ---- PIE DE PÁGINA ---- */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
