@@ -15,10 +15,12 @@
 }
 /*Recalco si alguien de mi grupo esta apunto de leer mi codigo que la anidacion primero
 pongo los estilos y luego ya los demas*/
+
 body{
     width: 100%; /*1512 es el 100%*/
     font-size: 16px; /* Base para em */
     background: var(--color-fondo);
+    min-height: 100vh; /* Altura mínima: 100% de la altura del viewport */
     color: white;
     margin: 0 auto;
     /*Para que no se reita el degradado*/
@@ -126,7 +128,7 @@ footer{
     margin-top:1.32% ;/*20*100/1512=1.32%*/
     padding: 1.32%; /* 20*100/1512=1.32% */
     text-align: center;
-    font-size: 2em; 
+    font-size: 1em; 
 }
 
 /*Estilos de la pagina que no es layaot*/
@@ -259,4 +261,22 @@ de temas a  % debo usar 186px como base de calculo*/
 /*informacion del p para el codigo que te llega al correto*/
 #infoCodigo{
     text-align: center;
+}
+
+/* query para tablet*/
+@media (max-width: 820px) {
+    body {
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 18px;
+    }
+    main h1 {
+        font-family: 'Permanent Marker', cursive; /* O 'Archivo Narrow' si quieres algo más sobrio */
+        font-size: 1.8em;
+    }
+    #tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    nav ul li a {
+        font-size: 1.2em; 
+    }
 }

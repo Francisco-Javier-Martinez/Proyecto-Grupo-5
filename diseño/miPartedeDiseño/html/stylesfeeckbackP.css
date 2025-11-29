@@ -102,3 +102,26 @@ main a{
     transform: scale(1.05);
     background: linear-gradient(135deg, #75aaff, #3a63f7);
 }
+
+/*query para moviles*/
+@media (max-width: 430px) {
+    body {
+        font-size: 17px; 
+    }
+    header {
+        padding: 4.65%; 
+    }
+    #correctoFalso,
+    #porquePregunta {
+        width: 90%; 
+    }
+    main a {
+        border-radius: 10px;
+    }
+    img {
+        /* 60px/430px=13.95% de la anchura */
+        width: 13.95%; 
+        height: auto;
+    }
+
+}
