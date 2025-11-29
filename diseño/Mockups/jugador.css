@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Permanent+Marker&display=swap');
 
+/* Estilos base de la página */
 body {
     background: linear-gradient(to bottom right, #000000, #2F0B4A);
     font-family: Arial, sans-serif;
@@ -11,6 +12,7 @@ body {
     margin: auto;
 }
 
+/* Contenedor principal blanco */
 .container {
     background-color: white;
     max-width: 656px;
@@ -21,6 +23,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Títulos principales */
 h2 {
     text-align: center;
     color: #57277B;
@@ -28,36 +31,33 @@ h2 {
     font-family: "Permanent Marker";
 }
 
+/* Subtítulos */
 h3 {
     color: #57277B;
     margin-top: 0;
     font-family: "Archivo Narrow";
 }
 
+/* Texto secundario */
 .subtitle {
     color: #666;
     font-size: 0.9rem;
 }
 
-.rojo{
-    background-color: red;
-}
-.azul{
-    background-color: blue;
-}
-.verde{
-    background-color: green;
-}
-.amarillo{
-    background-color: yellow;
-}
+/* Colores para las respuestas */
+.rojo { background-color: red; }
+.azul { background-color: blue; }
+.verde { background-color: green; }
+.amarillo { background-color: yellow; }
 
+/* Contenedor de la pregunta */
 .pregunta-container {
     text-align: center;
 }
 
+/* Temporizador */
 .timer {
-    font-size: 32px; /*2rem*/
+    font-size: 32px;
     font-weight: bold;
     color: #57277B;
     margin-bottom: 10px;
@@ -65,8 +65,9 @@ h3 {
     float: left;
 }
 
+/* Nombre del jugador */
 .nombre-jugador {
-    font-size: 19px;/*1.2rem*/
+    font-size: 19px;
     color: #57277B;
     margin-bottom: 20px;
     font-weight: bold;
@@ -74,17 +75,20 @@ h3 {
     float: right;
 }
 
+/* Sección de la pregunta */
 .pregunta-section h2 {
     color: #57277B;
     margin-bottom: 20px;
     font-family: "Permanent Marker";
-    clear: both;
+    clear: both; /* Limpia los floats anteriores */
 }
 
+/* Contenedor de imagen de pregunta */
 .imagen-pregunta {
     margin: 20px 0;
 }
 
+/* Placeholder para imagen */
 .placeholder-imagen {
     background-color: #F5F5F5;
     border-radius: 10px;
@@ -95,13 +99,15 @@ h3 {
     font-family: "Archivo Narrow";
 }
 
+/* Grid de respuestas */
 .respuestas {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
     gap: 15px;
     margin-top: 20px;
 }
 
+/* Estilo individual de cada respuesta */
 .respuesta {
     border-radius: 10px;
     padding: 15px;
@@ -110,12 +116,10 @@ h3 {
     cursor: pointer;
     transition: 0.3s;
     font-family: "Archivo Narrow";
-    height: 100px;
+    height: 100px; /* Altura fija para uniformidad */
 }
 
+/* Efecto hover en respuestas */
 .respuesta:hover {
-    filter: brightness(0.7); 
+    filter: brightness(0.7); /* Oscurece al pasar el mouse */
 }
-
-
-

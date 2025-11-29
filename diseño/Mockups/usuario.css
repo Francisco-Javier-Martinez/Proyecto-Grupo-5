@@ -2,6 +2,7 @@
 
 /*----------------------------------General--------------------------------------*/
 
+/* Estilos base de la página */
 body {
     background: linear-gradient(to bottom right, #000000, #2F0B4A);
     font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@ body {
     margin: auto;
 }
 
+/* Contenedor principal blanco */
 .container {
     background-color: white;
     max-width: 656px;
@@ -23,6 +25,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Títulos principales */
 h2 {
     text-align: center;
     color: #57277B;
@@ -30,164 +33,175 @@ h2 {
     font-family: "Permanent Marker";
 }
 
+/* Subtítulos */
 h3 {
     color: #57277B;
     margin-top: 0;
     font-family: "Archivo Narrow";
 }
 
+/* Texto secundario */
 .subtitle {
     color: #666;
     font-size: 0.9rem;
 }
 
-.rojo{
-    background-color: red;
-}
-.azul{
-    background-color: blue;
-}
-.verde{
-    background-color: green;
-}
-.amarillo{
-    background-color: yellow;
-}
+/* Colores base para temas (actualmente comentados) */
+/*
+.rojo{ background-color: red; }
+.azul{ background-color: blue; }
+.verde{ background-color: green; }
+.amarillo{ background-color: yellow; }
+*/
 
-/*----------------------------------Gestion de Usuarios--------------------------------------*/
+/*----------------------------------Gestión de Usuarios--------------------------------------*/
 
+/* Caja de formularios */
 .form-box {
     background-color: #F5F5F5;
     border-radius: 10px;
-    padding: 2.2865853658536585365853658536585%; /*15*100/656*/
-    margin: 2.2865853658536585365853658536585% 0;
+    padding: 2.286%; /* 15px / 656px */
+    margin: 2.286% 0;
     margin-left: auto;
     margin-right: auto;
 }
 
-.form-box {
-    label {
-        display: block;
-        margin-bottom: 0.79872204472843450479233226837061%;/*5*100/626*/
-        font-weight: bold;
-        color: #57277B;
-    }
-    
-    input{
-        width: 97.444089456869009584664536741214%;/*610*100/626*/
-        padding: 1.277955271565495207667731629393%; /*8*100/626*/
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin: auto;
-    }
+/* Estilos para labels de formularios */
+.form-box label {
+    display: block;
+    margin-bottom: 0.799%; /* 5px / 626px */
+    font-weight: bold;
+    color: #57277B;
 }
 
+/* Campos de entrada */
+.form-box input {
+    width: 97.444%; /* 610px / 626px */
+    padding: 1.278%; /* 8px / 626px */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Botón principal */
 .save-btn {
     background-color: #57277B;
     color: white;
     width: 100%;
-    padding: 1.8292682926829268292682926829268%; /*12*100/656*/
+    padding: 1.829%; /* 12px / 656px */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin: 3.048780487804878048780487804878% auto; /*20*100/656*/
+    margin: 3.049% auto; /* 20px / 656px */
     transition: 0.3s;
 }
 
+/* Efecto hover del botón */
 .save-btn:hover {
     background-color: #6a359c;
 }
 
+/* Lista de administradores */
 .admin-list {
-    margin-top:3.048780487804878048780487804878%;/*20*100/656*/
+    margin-top: 3.049%; /* 20px / 656px */
 }
 
+/* Caja individual de administrador */
 .admin-box {
     background-color: #F5F5F5;
     border-radius: 10px;
-    padding: 2.2865853658536585365853658536585%; /*15*100/656*/
-    margin: 2.2865853658536585365853658536585% 0;
+    padding: 2.286%; /* 15px / 656px */
+    margin: 2.286% 0;
     transition: 0.3s;
 }
 
+/* Efecto hover en caja de administrador */
 .admin-box:hover {
     background-color: #e9e9e9;
 }
 
+/* Información del administrador */
 .admin-info h3 {
     margin-top: 0;
-    margin-bottom: 1.5974440894568690095846645367412%; /*10*100/626*/
+    margin-bottom: 1.597%; /* 10px / 626px */
 }
 
+/* Detalles del administrador */
 .admin-details {
     align-items: center;
-    margin: 0.79872204472843450479233226837061% 0; /*5*100/626*/
+    margin: 0.799% 0; /* 5px / 626px */
     color: gray;
 }
 
-.admin-details {
-    .material-icons{
-        font-size: 1.125rem;
-        margin-right: 1.277955271565495207667731629393%; /*8*100/626*/
-        color: #57277B;
-    }
+/* Iconos material en detalles */
+.admin-details .material-icons {
+    font-size: 1.125rem;
+    margin-right: 1.278%; /* 8px / 626px */
+    color: #57277B;
 }
 
 /*-----------------------------------Creación de Juego-----------------------------------------*/
-.form-box{
-    #checkbox-publico {
-        float: right;
-        width: 3.1948881789137380191693290734824%; /*20*100/626*/
-    }
+
+/* Checkbox para juego público */
+.form-box #checkbox-publico {
+    float: right;
+    width: 3.195%; /* 20px / 626px */
 }
 
-.temas-box{
+/* Grid de temas */
+.temas-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     text-align: center;
-    gap: 2.3961661341853035143769968051118%; /*15*100/626*/ 
+    gap: 2.396%; /* 15px / 626px */
     width: 100%;
 }
 
-.tema-item{
+/* Items individuales de temas */
+.tema-item {
     width: 100%;
     background-color: #57277B;
-    color:white;
+    color: white;
     border-radius: 10px;
-    transition: transform 0.3s  ease;
-    cursor: pointer; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
     line-height: 40px;
     font-size: 0.875rem;
     margin: auto;
     margin-bottom: 10px;
 }
 
+/* Efecto hover en temas */
 .tema-item:hover {
     transform: scale(1.05);
 }
 
-#cancel{
+/* Botón de cancelar */
+#cancel {
     background-color: rgb(169, 27, 27);
 }
 
-#cancel:hover{
+/* Efecto hover en cancelar */
+#cancel:hover {
     background-color: rgb(214, 49, 49);
 }
 
-.buttons-box{
+/* Contenedor para botones en grid */
+.buttons-box {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* 
+/* Sección comentada de selección de colores */
+/*
 .color{
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    transition: transform 0.3s  ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
@@ -201,4 +215,5 @@ h3 {
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     gap: 10px;
-} */
+}
+*/
