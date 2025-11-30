@@ -278,6 +278,7 @@ que es 320+25+25= 370*/
     margin:20px auto;
 }
 
+/* Ajustamos la distribución del grid para adaptarla al tamaño reducido de la pantalla de la tablet */
 @media(max-width:820px){
     #gestionAvatares section{
         grid-template-columns: 1fr 1fr 1fr; /*3 column*/
