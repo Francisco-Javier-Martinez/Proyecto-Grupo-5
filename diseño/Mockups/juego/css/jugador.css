@@ -55,6 +55,11 @@ h3 {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 /* Temporizador */
 .timer {
     font-size: 32px;
