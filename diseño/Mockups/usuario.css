@@ -60,7 +60,7 @@ h3 {
 .form-box {
     background-color: #F5F5F5;
     border-radius: 10px;
-    padding: 2.286%; /* 15px / 656px */
+    padding: 2.286%; /* 15px * 100 / 656px */
     margin: 2.286% 0;
     margin-left: auto;
     margin-right: auto;
@@ -69,15 +69,15 @@ h3 {
 /* Estilos para labels de formularios */
 .form-box label {
     display: block;
-    margin-bottom: 0.799%; /* 5px / 626px */
+    margin-bottom: 0.799%; /* 5px * 100 / 626px */
     font-weight: bold;
     color: #57277B;
 }
 
 /* Campos de entrada */
 .form-box input {
-    width: 97.444%; /* 610px / 626px */
-    padding: 1.278%; /* 8px / 626px */
+    width: 97.444%; /* 610px * 100 / 626px */
+    padding: 1.278%; /* 8px * 100 / 626px */
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: auto;
@@ -88,12 +88,12 @@ h3 {
     background-color: #57277B;
     color: white;
     width: 100%;
-    padding: 1.829%; /* 12px / 656px */
+    padding: 1.829%; /* 12px * 100 / 656px */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin: 3.049% auto; /* 20px / 656px */
+    margin: 3.049% auto; /* 20px * 100 / 656px */
     transition: 0.3s;
 }
 
@@ -104,14 +104,14 @@ h3 {
 
 /* Lista de administradores */
 .admin-list {
-    margin-top: 3.049%; /* 20px / 656px */
+    margin-top: 3.049%; /* 20px * 100 / 656px */
 }
 
 /* Caja individual de administrador */
 .admin-box {
     background-color: #F5F5F5;
     border-radius: 10px;
-    padding: 2.286%; /* 15px / 656px */
+    padding: 2.286%; /* 15px * 100 / 656px */
     margin: 2.286% 0;
     transition: 0.3s;
 }
@@ -124,20 +124,20 @@ h3 {
 /* Información del administrador */
 .admin-info h3 {
     margin-top: 0;
-    margin-bottom: 1.597%; /* 10px / 626px */
+    margin-bottom: 1.597%; /* 10px * 100 / 626px */
 }
 
 /* Detalles del administrador */
 .admin-details {
     align-items: center;
-    margin: 0.799% 0; /* 5px / 626px */
+    margin: 0.799% 0; /* 5px * 100 / 626px */
     color: gray;
 }
 
 /* Iconos material en detalles */
 .admin-details .material-icons {
     font-size: 1.125rem;
-    margin-right: 1.278%; /* 8px / 626px */
+    margin-right: 1.278%; /* 8px * 100 / 626px */
     color: #57277B;
 }
 
@@ -146,7 +146,7 @@ h3 {
 /* Checkbox para juego público */
 .form-box #checkbox-publico {
     float: right;
-    width: 3.195%; /* 20px / 626px */
+    width: 3.195%; /* 20px * 100 / 626px */
 }
 
 /* Grid de temas */
@@ -155,7 +155,7 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     text-align: center;
-    gap: 2.396%; /* 15px / 626px */
+    gap: 2.396%; /* 15px * 100 / 626px */
     width: 100%;
 }
 
@@ -221,37 +221,37 @@ h3 {
 @media screen and (max-width: 1024px) {
     body {
         width: 95%;
-        padding: 1.465%; /* 15px / 1024px */
+        padding: 1.465%; /* 15px * 100 / 1024px */
     }
     
     .container {
         max-width: 90%;
-        margin: 1.953% auto; /* 20px / 1024px */
-        padding: 1.465%; /* 15px / 1024px */
+        margin: 1.953% auto; /* 20px * 100 / 1024px */
+        padding: 1.465%; /* 15px * 100 / 1024px */
     }
     
     .form-box {
-        padding: 1.953%; /* 20px / 1024px */
+        padding: 1.953%; /* 20px * 100 / 1024px */
         margin: 1.953% 0;
     }
     
     .admin-box {
-        padding: 1.953%; /* 20px / 1024px */
+        padding: 1.953%; /* 20px * 100 / 1024px */
         margin: 1.953% 0;
     }
     
     .temas-box {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.953%; /* 20px / 1024px */
+        gap: 1.953%; /* 20px * 100 / 1024px */
     }
     
     .tema-item {
         line-height: 35px;
         font-size: 0.8rem;
-        margin-bottom: 0.977%; /* 10px / 1024px */
+        margin-bottom: 0.977%; /* 10px * 100 / 1024px */
     }
     
     .buttons-box {
-        gap: 1.953%; /* 20px / 1024px */
+        gap: 1.953%; /* 20px * 100 / 1024px */
     }
 }
