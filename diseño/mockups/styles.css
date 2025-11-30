@@ -24,6 +24,7 @@ body {
     font-size:100%;
     display:grid;
     grid-template-rows: auto 1fr auto;
+    min-height: 100vh; /*PARA QUE EL FOOTER SE BAJE SI EL BODY NO OCUPA TODO EL ALTO VISIBLE*/
 }
 
 header{
@@ -56,6 +57,9 @@ input[type="submit"]:hover {
 main{
     width:100%; /*1512px*/
 }
+h1{
+    font-family: 'Bitcount Grid Single';
+}
 /*-------------------------------*/
 
 
@@ -63,7 +67,6 @@ main{
 
 #loginAdmin header h1 {
     text-align: center;
-    font-family: 'Permanent Marker', cursive;
     margin-bottom: 1.32%;/*20px;*/
     font-size:3em;/*sobre 32 px bases del h1*/
 }
@@ -85,7 +88,6 @@ Tenemos 1512px para usar decidimos que el formulario coger 440
 #loginAdmin form h1 {
     color: white;
     margin-bottom: 12.5%; /*50*100/400=12,5 */
-    font-family: 'Permanent Marker', cursive;
 }
 
 /*La imagen del logo hemos decido que cogeremos 150px de los 1512px usable. Es un tamaño visualmente decente ni muy grande ni pequeña*/
@@ -129,10 +131,6 @@ que es 320+25+25= 370*/
 
 
 /* PÁGINA GESTIÓN DE AVATARES*/
-
-#gestionAvatares h1{
-    font-family: 'Permanent Marker', cursive;
-}
 #gestionAvatares header h1 {
     /*alto: 150.32*/
     margin-bottom: 1.32%; /*20px.  1512 px total. 20*100 / 1512 = 1.32%*/
@@ -194,7 +192,6 @@ que es 320+25+25= 370*/
 /*--------------GESTION DE PREGUNTAS---------------*/
 #gestionPreguntas h1{
     text-align:center;
-    font-family: 'Bitcount Grid Single';
 }
 
 #gestionPreguntas main{
@@ -284,5 +281,9 @@ que es 320+25+25= 370*/
 @media(max-width:820px){
     #gestionAvatares section{
         grid-template-columns: 1fr 1fr 1fr; /*3 column*/
+    }
+
+    #gestionPreguntas #contenedorRespuestas{
+        grid-template-columns: 1fr;
     }
 }
