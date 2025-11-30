@@ -88,8 +88,8 @@ h3 {
     margin: 20px 0;
 }
 
-/* Placeholder para imagen */
-.placeholder-imagen {
+/* Campo para imagen */
+.cuadro-imagen {
     background-color: #F5F5F5;
     border-radius: 10px;
     padding: 60px 20px;
@@ -117,9 +117,92 @@ h3 {
     transition: 0.3s;
     font-family: "Archivo Narrow";
     height: 100px; /* Altura fija para uniformidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Efecto hover en respuestas */
 .respuesta:hover {
     filter: brightness(0.7); /* Oscurece al pasar el mouse */
 }
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .timer {
+        font-size: 28px;
+    }
+    
+    .nombre-jugador {
+        font-size: 17px;
+    }
+    
+    .respuesta {
+        height: 90px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 1.333%; /* 8px / 600px */
+    }
+    
+    .container {
+        max-width: 90%;
+        margin: 1.667% auto; /* 10px / 600px */
+        padding: 2%; /* 12px / 600px */
+        border-radius: 10px;
+    }
+    
+    .timer {
+        font-size: 22px;
+        margin-bottom: 1.667%; /* 10px / 600px */
+        float: none;
+        text-align: center;
+    }
+    
+    .nombre-jugador {
+        font-size: 15px;
+        margin-bottom: 1.667%; /* 10px / 600px */
+        float: none;
+        text-align: center;
+    }
+    
+    .pregunta-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 2%; /* 12px / 600px */
+    }
+    
+    .cuadro-imagen {
+        padding: 5% 1.667%; /* 30px 10px / 600px */
+        font-size: 0.9rem;
+    }
+    
+    .respuestas {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        gap: 1.667%; /* 10px / 600px */
+        margin-bottom: 4%;
+    }
+    
+    .respuesta {
+        height: 70px;
+        padding: 1.333%; /* 8px / 600px */
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+

@@ -217,3 +217,41 @@ h3 {
     gap: 10px;
 }
 */
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: 95%;
+        padding: 1.465%; /* 15px / 1024px */
+    }
+    
+    .container {
+        max-width: 90%;
+        margin: 1.953% auto; /* 20px / 1024px */
+        padding: 1.465%; /* 15px / 1024px */
+    }
+    
+    .form-box {
+        padding: 1.953%; /* 20px / 1024px */
+        margin: 1.953% 0;
+    }
+    
+    .admin-box {
+        padding: 1.953%; /* 20px / 1024px */
+        margin: 1.953% 0;
+    }
+    
+    .temas-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.953%; /* 20px / 1024px */
+    }
+    
+    .tema-item {
+        line-height: 35px;
+        font-size: 0.8rem;
+        margin-bottom: 0.977%; /* 10px / 1024px */
+    }
+    
+    .buttons-box {
+        gap: 1.953%; /* 20px / 1024px */
+    }
+}
