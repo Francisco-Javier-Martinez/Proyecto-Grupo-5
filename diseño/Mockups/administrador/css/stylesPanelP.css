@@ -279,4 +279,7 @@ de temas a  % debo usar 186px como base de calculo*/
     nav ul li a {
         font-size: 1.2em; 
     }
+    #formulario{
+        width: 70%;
+    }
 }
