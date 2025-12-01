@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@400&family=Archivo+Narrow:wght@300;700&display=swap');
+
+:root {
+    --fondo: linear-gradient(to bottom right, #000, #2F0B4A);
+    --tarjeta: #2F0B4A;
+    --boton: #7943A4;
+    --tema1: rgb(240, 129, 221);
+    --tema2: royalblue;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    font-family: 'Archivo Narrow', sans-serif;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 2% 0;
+    background: rgba(0, 0, 60, 0.6);
+}
+
+header h1 {
+    font-family: "Bitcount Grid Single";
+    font-size: 2.5rem;
+}
+
+/* TITULO */
+main h2 {
+    text-align: center;
+    font-family: "Bitcount Grid Single";
+    margin-top: 3%;
+    font-size: 2rem;
+}
+
+/* GRID JUEGOS */
+.grid-juegos {
+    width: 90%;
+    margin: 4% auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* TARJETA */
+.tarjeta {
+    background: var(--tarjeta);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.tarjeta:hover {
+    background: #3b1d56;
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estado {
+    background: rgb(134, 193, 241);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* TEMAS */
+.temas {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.temas button {
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.temas button:nth-child(odd) {
+    background: var(--tema1);
+}
+
+.temas button:nth-child(even) {
+    background: var(--tema2);
+}
+
+/* BOTÓN JUGAR */
+.jugar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 0;
+    background: var(--boton);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.jugar:hover {
+    background: #5c2aa5;
+}
+
+/* CÓDIGO */
+.codigo {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.codigo input {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 5%;
+}
+
+/* ============================= */
+/* MEDIA QUERY PARA TABLET ≤820px */
+/* ============================= */
+@media (max-width: 820px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    /* Se fuerza 3 columnas en tablets */
+    .grid-juegos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .tarjeta-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .temas button {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .jugar {
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================= */
+/* MEDIA QUERY PARA MÓVIL ≤600px */
+/* ============================= */
+@media (max-width: 600px) {
+
+    /* FORZAR 1 COLUMNA */
+    .grid-juegos {
+        grid-template-columns: 1fr !important;
+        gap: 22px;
+        margin-top: 20px;
+    }
+
+    .tarjeta {
+        width: 90%;
+    }
+}
+
+/* ============================= */
+/* MÓVIL PEQUEÑO ≤400px */
+/* ============================= */
+@media (max-width: 400px) {
+
+    header {
+        padding: 24px 12px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;       
+        line-height: 2.2rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    .tarjeta {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .temas button {
+        font-size: 1rem;
+        padding: 11px 0;
+    }
+
+    .jugar {
+        padding: 14px 0;
+        font-size: 1.1rem;
+    }
+
+    .codigo input {
+        width: 85%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
