@@ -16,115 +16,117 @@
 =========================== */
 body {
     margin: 0 auto;
-    width: 820px;
+    width: 100%; 
     min-height: 100vh;
     background: linear-gradient(to bottom right, #000000, #2F0B4A);
     font-family: 'Archivo Narrow', sans-serif;
     color: white;
     text-align: center;
     position: relative;
+      /*Para que no se repita el degradado*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 /* ===========================
    AVATARES
 =========================== */
 
-/* Header */
 header img.logo-principal {
-    width: 120px;
-    margin: 25px auto 10px;
+    width: 14.63%; 
+    margin: 3.05% auto 1.22%; 
     display: block;
 }
 
 header h1{
-    font-size: 32px;
+    font-size: 2em; 
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 2.44%; 
     font-family: "Bitcount Grid Single", sans-serif;
 }
 
-/* Caja central */
 main.avatares {
     background-color: var(--color-tercero);
-    width: 420px;
+    width: 51.22%; 
     margin: 0 auto;
-    padding: 35px 30px;
+    padding: 4.27% 3.66%; 
     border-radius: 12px;
     box-shadow: 0 4px 25px rgba(0,0,0,0.6);
 }
 
 main.avatares h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 1.375em; 
+    margin-bottom: 1.83%; 
 }
 
-/* Avatares */
 #avatares img {
-    width: 45px;
-    margin: 0 6px;
+    width: 5.49%; 
+    margin: 0 0.73%; 
 }
 
-/* Input */
 input {
     width: 80%;
-    height: 40px;
+    height: 4.88%; 
     border: none;
     border-radius: 8px;
     background: #3c2453;
-    padding: 10px;
+    padding: 1.22%; 
     color: #fff;
-    margin-top: 10px;
+    margin-top: 1.22%; 
+    font-size: 0.9375em; 
 }
 
-/* Botón */
 button {
     width: 70%;
-    height: 45px;
-    margin-top: 20px;
+    height: 5.49%; 
+    margin-top: 2.44%; 
     background: #ff79c9;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     color: #000;
+    font-size: 1em; 
 }
+
 /* ===========================
    CLASIFICACIÓN
 =========================== */
 
 nav img {
-    width: 35px;
-    margin: 10px;
+    width: 4.27%; 
+    margin: 1.22%; 
 }
 
 header img {
-    width: 40px;
+    width: 4.88%; 
 }
 
-/* Caja principal de Clasificación */
 main.clasificacion {
     margin: 0 auto;
     background-color: var(--color-tercero);
-    padding: 20px 0;
+    padding: 2.44% 0; 
     border-radius: 10px;
-    margin-top: 10px;
-    width: 620px;
+    margin-top: 1.22%; 
+    width: 75.61%; 
 }
 
 .top {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 0.875em; 
+    margin-bottom: 2.44%; 
 }
 
-/* Tarjetas */
 .tarjetas {
-    width: 450px;
-    margin: 10px auto;
-    padding: 12px;
+    width: 54.87%; 
+    margin: 1.22% auto; 
+    padding: 1.46%; 
     border-radius: 10px;
     background-color: var(--color-secundario);
     color: white;
     font-weight: bold;
     text-align: left;
+    font-size: 1em;
 }
 
 .tarjetas:last-child {
@@ -132,19 +134,19 @@ main.clasificacion {
 }
 
 .puesto {
-    width: 40px;
-    font-size: 20px;
+    width: 4.88%; 
+    font-size: 1.25em; 
     display: inline-block;
 }
 
 .nombre {
-    width: 315px;      
-    padding-left: 15px;
+    width: 38.41%; 
+    padding-left: 1.83%; 
     display: inline-block;
 }
 
 .puntos {
-    font-size: 14px;
+    font-size: 0.875em; 
 }
 
 /* Colores del top 3 */
@@ -157,8 +159,42 @@ main.clasificacion {
 =========================== */
 footer {
     width: 100%;
-    padding: 12px 0;
-    font-size: 14px;
+    padding: 1.46% 0; 
+    font-size: 0.875em; 
     color: #FFFFFF;
-    margin-top: 15px;
+    margin-top: 1.83%; 
+}
+
+
+@media (max-width: 390px) {
+    body {
+        font-size: 17px; 
+    }
+    header {
+        padding: 4.65%; 
+    }
+    main.avatares, main.clasificacion, .contenedor-principal {
+        width: 80%; /* Se adapta al 80% del ancho del móvil */
+        padding: 4%; 
+    }
+    #avatares img,
+    nav img,
+    header img.logo-principal {
+        width: 6%; 
+        height: auto;
+    }
+    input {
+        width: 70%; 
+    }
+    button{
+        width: 30%; 
+    }
+    .tarjetas, .publico-container, .descripcion-tema {
+        width: 80%; 
+        padding: 2%; 
+    }
+    .botonanadir {
+        width: 80%;
+        padding: 2% 4%;
+    }
 }
