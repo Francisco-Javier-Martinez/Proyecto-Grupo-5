@@ -15,116 +15,131 @@
    ESTILOS GENERALES
 =========================== */
 body {
-    margin: 0 auto;
-    width: 820px;
+    margin: 0;
+    width: 100%; 
     min-height: 100vh;
     background: linear-gradient(to bottom right, #000000, #2F0B4A);
     font-family: 'Archivo Narrow', sans-serif;
     color: white;
     text-align: center;
-    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 /* ===========================
-   AVATARES
+   HEADER
 =========================== */
 
-/* Header */
 header img.logo-principal {
-    width: 120px;
-    margin: 25px auto 10px;
+    width: 200px; 
+    max-width: 40%;
+    margin: 30px auto 10px; 
     display: block;
 }
 
 header h1{
-    font-size: 32px;
+    font-size: 2.2rem; 
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     font-family: "Bitcount Grid Single", sans-serif;
 }
 
-/* Caja central */
+/* ===========================
+   AVATARES
+=========================== */
+
 main.avatares {
     background-color: var(--color-tercero);
-    width: 420px;
+    width: 90%; 
+    max-width: 450px;
     margin: 0 auto;
-    padding: 35px 30px;
+    padding: 25px; 
     border-radius: 12px;
     box-shadow: 0 4px 25px rgba(0,0,0,0.6);
 }
 
 main.avatares h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 1.7rem; 
+    margin-bottom: 20px; 
 }
 
-/* Avatares */
+#avatares {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
 #avatares img {
-    width: 45px;
-    margin: 0 6px;
+    width: 80px;
+    max-width: 22vw;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-/* Input */
 input {
-    width: 80%;
-    height: 40px;
+    width: 90%;
+    padding: 12px 10px;
     border: none;
     border-radius: 8px;
     background: #3c2453;
-    padding: 10px;
     color: #fff;
-    margin-top: 10px;
+    margin-top: 10px; 
+    font-size: 1rem; 
 }
 
-/* Botón */
 button {
-    width: 70%;
-    height: 45px;
-    margin-top: 20px;
+    width: 90%;
+    padding: 12px;
+    margin-top: 20px; 
     background: #ff79c9;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     color: #000;
+    font-size: 1.1rem; 
 }
+
 /* ===========================
    CLASIFICACIÓN
 =========================== */
 
 nav img {
-    width: 35px;
-    margin: 10px;
+    width: 40px;
+    margin: 10px; 
 }
 
 header img {
-    width: 40px;
+    width: 50px;
 }
 
-/* Caja principal de Clasificación */
 main.clasificacion {
     margin: 0 auto;
     background-color: var(--color-tercero);
-    padding: 20px 0;
+    padding: 20px; 
     border-radius: 10px;
-    margin-top: 10px;
-    width: 620px;
+    margin-top: 15px; 
+    width: 90%; 
+    max-width: 500px;
 }
 
 .top {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 1rem; 
+    margin-bottom: 20px; 
 }
 
-/* Tarjetas */
 .tarjetas {
-    width: 450px;
-    margin: 10px auto;
-    padding: 12px;
+    width: 90%; 
+    margin: 10px auto; 
+    padding: 10px; 
     border-radius: 10px;
     background-color: var(--color-secundario);
     color: white;
     font-weight: bold;
     text-align: left;
+    font-size: 1.1rem;
 }
 
 .tarjetas:last-child {
@@ -133,18 +148,18 @@ main.clasificacion {
 
 .puesto {
     width: 40px;
-    font-size: 20px;
+    font-size: 1.3rem; 
     display: inline-block;
 }
 
 .nombre {
-    width: 315px;      
-    padding-left: 15px;
+    width: 60%; 
+    padding-left: 10px; 
     display: inline-block;
 }
 
 .puntos {
-    font-size: 14px;
+    font-size: 1rem; 
 }
 
 /* Colores del top 3 */
@@ -153,12 +168,56 @@ main.clasificacion {
 .bronce { background: #d8b7a2; color: #333; }
 
 /* ===========================
-   FOOTER (ambas páginas)
+   FOOTER
 =========================== */
 footer {
     width: 100%;
-    padding: 12px 0;
-    font-size: 14px;
+    padding: 15px 0; 
+    font-size: 0.9rem; 
     color: #FFFFFF;
-    margin-top: 15px;
+    margin-top: 20px; 
+}
+
+/* ===========================
+   RESPONSIVE REAL
+=========================== */
+
+@media (max-width: 600px) {
+
+    header img.logo-principal {
+        width: 50%;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    main.avatares {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #avatares img {
+        width: 70px;
+        max-width: 26vw;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    #avatares img {
+        width: 60px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
