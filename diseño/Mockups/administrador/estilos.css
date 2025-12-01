@@ -16,7 +16,7 @@
 =========================== */
 body {
     margin: 0 auto;
-    width: 1512px;
+    width: 100%;
     min-height: 100vh;
     background: linear-gradient(to bottom right, #000000, #2F0B4A);
     font-family: "Archivo Narrow", sans-serif;
@@ -37,7 +37,7 @@ header {
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875em; /* 14px ÷ 16 */
 }
 
 /* ---- CONTENIDO PRINCIPAL ---- */
@@ -46,9 +46,11 @@ main {
     display: flex;
     justify-content: center;
     padding: 20px;
-    
 }
-
+main a{
+    color: inherit;
+    text-decoration: none;
+}
 .contenedor-principal {
     width: 500px;
     background: var(--color-tercero);
@@ -67,7 +69,7 @@ main {
 
 .grupo-botones button {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 0.875em; /* 14px ÷ 16 */
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -93,7 +95,6 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-    
 }
 
 .icono-borrar {
@@ -110,16 +111,8 @@ main {
 
 .autor-tarjeta {
     margin-top: 5px;
-    font-size: 13px;
+    font-size: 0.8125em; /* 13px ÷ 16 */
 }
-
-
-
-
-
-
-
-
 
 /* ===========================================================
    NUEVOS ESTILOS PARA LA PÁGINA DE CREACIÓN DE TEMAS
@@ -127,7 +120,7 @@ main {
 
 /* --- Título principal --- */
 .contenedor-principal h2 {
-    font-size: 24px;
+    font-size: 1.5em; /* 24px ÷ 16 */
     margin-bottom: 25px;
     font-weight: bold;
     color: #ffffff;
@@ -140,7 +133,7 @@ main {
     text-align: left;
     width: 400px;
     margin-bottom: 8px;
-    font-size: 16px;
+    font-size: 1em; /* 16px ÷ 16 */
 }
 
 /* --- Input de texto --- */
@@ -149,7 +142,7 @@ main {
     padding: 10px;
     border-radius: 10px;
     border: none;
-    font-size: 15px;
+    font-size: 0.9375em; /* 15px ÷ 16 */
     margin-bottom: 25px;
     background: #ffffff;
 }
@@ -168,19 +161,17 @@ main {
 
 .switch-label {
     text-align: left;
-    font-size: 16px;
+    font-size: 1em; /* 16px ÷ 16 */
     font-weight: bold;
     display: flex;
     flex-direction: column;
-
 }
 
 .switch-label .descripcion {
-    font-size: 13px;
+    font-size: 0.8125em; /* 13px ÷ 16 */
     font-weight: normal;
     opacity: 0.9;
 }
-
 
 /* --- Textarea --- */
 .descripcion-tema {
@@ -188,7 +179,7 @@ main {
     height: 120px;
     border-radius: 12px;
     padding: 12px;
-    font-size: 15px;
+    font-size: 0.9375em; /* 15px ÷ 16 */
     resize: none;
     background: #ffffff;
 }
@@ -197,7 +188,7 @@ main {
 .botonanadir {
     margin-top: 30px;
     padding: 12px 25px;
-    font-size: 15px;
+    font-size: 0.9375em; /* 15px ÷ 16 */
     font-weight: bold;
     border-radius: 12px;
     cursor: pointer;
@@ -213,5 +204,5 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 0.875em; /* 14px ÷ 16 */
 }
