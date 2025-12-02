@@ -3,10 +3,10 @@ export class CJuego {
         this.modelo = modelo;
         this.vista = vista;
         console.log('Controlador: Inicializado.');
-        this.cargarPreguntasConRespuestas(); // Cambia esto
+        this.cargarPreguntasConRespuestas(); 
     }
 
-    // Método NUEVO para cargar preguntas con respuestas
+    // Método para cargar preguntas con respuestas
     async cargarPreguntasConRespuestas() {
         try {
             console.log("Controlador: Solicitando preguntas COMPLETAS al Modelo...");
@@ -17,20 +17,6 @@ export class CJuego {
             console.log("Controlador: Preguntas COMPLETAS enviadas a la Vista");
         } catch (error) {
             this.vista.mostrarError("Fallo al cargar las preguntas con respuestas.");
-        }
-    }
-
-    // Mantén el método original si lo necesitas para otra cosa
-    async cargarPreguntas() {
-        try {
-            console.log("Controlador: Solicitando datos de preguntas al Modelo...");
-            const preguntas = await this.modelo.obtenerPreguntas();
-            console.log("Controlador: Datos de preguntas recibidos del Modelo");
-            console.log("Controlador: Enviando datos de preguntas a la Vista...")
-            this.vista.mostrarPreguntas(preguntas);
-            console.log("Controlador: Datos de preguntas enviados a la Vista");
-        } catch (error) {
-            this.vista.mostrarError("Fallo al cargar las preguntas.");
         }
     }
 

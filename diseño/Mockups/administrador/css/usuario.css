@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=News+Cycle:wght@400;700&family=Permanent+Marker&display=swap');
 
 
+
 /*----------------------------------General--------------------------------------*/
 
 :root{
@@ -165,7 +166,7 @@ h3 {
 /* Texto secundario */
 .subtitle {
     color: var(--color-texto-secundario);
-    font-size: 0.9rem;
+    font-size: 1.4rem;
 }
 
 /* Colores base para temas (actualmente comentados) */
@@ -199,6 +200,7 @@ h3 {
     margin-bottom: 0.799%; /* 5px / 626px */
     font-weight: bold;
     color: var(--color-primario);
+    font-size: 1.4rem;
 }
 
 /* Campos de entrada */
@@ -280,24 +282,24 @@ h3 {
 .temas-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    text-align: center;
     gap: 2.396%; /* 15px / 626px */
     width: 100%;
 }
 
 /* Items individuales de temas */
 .tema-item {
-    width: 100%;
     background-color: var(--color-primario);
     color: white;
     border-radius: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    line-height: 40px;
-    font-size: 0.875rem;
-    margin: auto;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    height: 100px;
+
+    display: flex;/*Para lograr centrarlo verticalmente*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Efecto hover en temas */
@@ -344,6 +346,8 @@ h3 {
     gap: 10px;
 }
 */
+
+
 
 @media screen and (max-width: 1024px) {
 

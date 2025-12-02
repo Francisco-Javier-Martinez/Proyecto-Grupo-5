@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creación del Juego</title>
     <link rel="stylesheet" href="css/usuario.css">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    
 </head>
 <body>
 <header>
     <a href="panelAdministrador.html">
         <img id="logo" src="img/preguntadawLogo.png" alt="Logo preguntadaw">
     </a>
-    <h1>Crear Juego</h1>
+    <h1>PreguntaDaw</h1>
 </header>
 <nav>
         <ul>
@@ -25,50 +27,56 @@
     </nav>
 <main>
     <div class="container">
-        <h2>Crear nuevo Juego</h2>
-        <p class="subtitle">Completa los datos de tu nuevo juego. Recuerda que debe tener exactamente 4 temas.</p>
-        <div class="form-box">
-            <label>Titulo del juego</label>
-            <input type="text" placeholder="Ej: Cultura General">
-        </div>
-        <div class="form-box">
-            <label>Juego Publico</label>
-            <span class="subtitle">Permite que otros usuarios puedan encontrar y jugar tu juego</span>
-            <input type="checkbox" name="juegoPublico" id="checkbox-publico"/>
-        </div>
-        <div class="form-box">
-            <label> Temas del Juego</label>
-            <p class="subtitle">Selecciona temas sugeridos o crea los tuyos propios</p>
-            <div class="temas-box">
-                <div class="tema-item">📓 <br> Historia</div>
-                <div class="tema-item">🔬 <br> Ciencia</div>
-                <div class="tema-item">🎨 <br> Arte</div>
-                <div class="tema-item">⚽ <br> Deportes</div>
-
-                <div class="tema-item">🌍 <br> Geografía</div>
-                <div class="tema-item">🎭 <br> Entretenimiento</div>
-                <div class="tema-item">🎵 <br> Música</div>
-                <div class="tema-item">📚 <br> Literatura</div>
-
-                <div class="tema-item">💻 <br> Tecnología</div>
-                <div class="tema-item">🌿 <br> Naturaleza</div>
-                <div class="tema-item">🎬 <br> Cine</div>
-                <div class="tema-item">🍕 <br> Comida</div>
+        <form action="panelAdministrador.html" method="post">
+            <p class="subtitle">Completa los datos de tu nuevo juego. Recuerda que debe tener exactamente 4 temas.</p>
+            <div class="form-box">
+                <label>Titulo del juego</label>
+                <input type="text" placeholder="Ej: Cultura General">
             </div>
-        </div>
-        <h2>Tus Temas</h2>
-        <div>
-            <p class="subtitle">Temas: 0/4</p>
-            
+            <div class="form-box">
+                <label>Juego Publico</label>
+                <span class="subtitle">Permite que otros usuarios puedan encontrar y jugar tu juego</span>
+                <input type="checkbox" name="juegoPublico" id="checkbox-publico"/>
+            </div>
+            <div class="form-box">
+                <label> Temas del Juego</label>
+                <p class="subtitle">Selecciona temas sugeridos o crea los tuyos propios</p>
 
-        </div>
-        <div class="form-box">
-            <a href="panelAdministrador.html"><button>Crear Juego</button></a>
-        </div>
+                <!-- <div >
+                    
+                </div> -->
+                
+                <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                            <ul class="splide__list">
+                                
+                            </ul>
+                    </div>
+                    <div class="splide__arrows">
+                        <button type="button" class="splide__arrow splide__arrow--prev">‹</button>
+                        <button type="button" class="splide__arrow splide__arrow--next">›</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2>Tus Temas</h2>
+
+            <p class="subtitle">Temas: 0/4</p>
+            <div class="form-box" id="arrastrar-box">
+
+            </div>
+
+            <button type="submit" class="save-btn">Crear Juego</button>
+
+        </form>
     </div>
 </main>
 <footer>
     <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
 </footer>
+    
+    <script type="module" src="../administrador/JS/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </body>
 </html>

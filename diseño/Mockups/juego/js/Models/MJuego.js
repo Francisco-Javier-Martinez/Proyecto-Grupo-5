@@ -35,6 +35,10 @@ export class MJuego {
         }
     }
 
+    obtenerTemas(){
+        return fetch('../js/Data/temas.json').then(r => r.json());
+    }
+
     async obtenerPreguntas() {
         return fetch('../js/Data/preguntas.json').then(r => r.json());
     }
