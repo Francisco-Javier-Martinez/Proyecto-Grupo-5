@@ -1,0 +1,49 @@
+export class CJuego {
+    constructor(modelo, vista) {
+        this.modelo = modelo;
+        this.vista = vista;
+        console.log('Controlador: Inicializado.');
+        this.cargarPreguntasConRespuestas(); // Cambia esto
+    }
+
+    // Método NUEVO para cargar preguntas con respuestas
+    async cargarPreguntasConRespuestas() {
+        try {
+            console.log("Controlador: Solicitando preguntas COMPLETAS al Modelo...");
+            const preguntasCompletas = await this.modelo.obtenerPreguntasConRespuestas();
+            console.log("Controlador: Datos de preguntas COMPLETAS recibidos del Modelo");
+            console.log("Controlador: Enviando preguntas COMPLETAS a la Vista...")
+            this.vista.mostrarPreguntas(preguntasCompletas);
+            console.log("Controlador: Preguntas COMPLETAS enviadas a la Vista");
+        } catch (error) {
+            this.vista.mostrarError("Fallo al cargar las preguntas con respuestas.");
+        }
+    }
+
+    // Mantén el método original si lo necesitas para otra cosa
+    async cargarPreguntas() {
+        try {
+            console.log("Controlador: Solicitando datos de preguntas al Modelo...");
+            const preguntas = await this.modelo.obtenerPreguntas();
+            console.log("Controlador: Datos de preguntas recibidos del Modelo");
+            console.log("Controlador: Enviando datos de preguntas a la Vista...")
+            this.vista.mostrarPreguntas(preguntas);
+            console.log("Controlador: Datos de preguntas enviados a la Vista");
+        } catch (error) {
+            this.vista.mostrarError("Fallo al cargar las preguntas.");
+        }
+    }
+
+    async cargarTemas() {
+        try {
+            console.log("Controlador: Solicitando datos de temas al Modelo...");
+            const temas = await this.modelo.obtenerTemas();
+            console.log("Controlador: Datos de temas recibidos del Modelo");
+            console.log("Controlador: Enviando datos de temas a la Vista...")
+            this.vista.mostrarTemas(temas);
+            console.log("Controlador: Datos de temas enviados a la Vista");
+        } catch (error) {
+            this.vista.mostrarError("Fallo al cargar los temas.");
+        }
+    }
+}

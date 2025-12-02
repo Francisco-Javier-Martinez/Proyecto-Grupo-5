@@ -1,0 +1,16 @@
+[
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "titulo": "Revolución Francesa",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "titulo": "Segunda Guerra Mundial",
+    "imagen": "",
+    "puntuacion": 300
+  }
+]

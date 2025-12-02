@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
             cuadroFeedback.style.backgroundColor = "green";
             cuadroFeedback.style.color = "white";
             cuadroFeedback.innerHTML = `
-                <h2>✅ CORRECTO</h2>
+                <h2>✓ CORRECTO</h2>
                 <h3>+200 PUNTOS</h3>
             `;
         } else {
             cuadroFeedback.style.backgroundColor = "red";
             cuadroFeedback.style.color = "white";
             cuadroFeedback.innerHTML = `
-                <h2>❌ INCORRECTO</h2>
+                <h2>X INCORRECTO</h2>
                 <h3>+0 PUNTOS</h3>
             `;
         }

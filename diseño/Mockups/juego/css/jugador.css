@@ -121,10 +121,14 @@ a{
     cursor: pointer;
     transition: 0.3s;
     font-family: "Archivo Narrow";
-    height: 100px; /* Altura fija para uniformidad */
+    height: 100px; 
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Efecto hover en respuestas */

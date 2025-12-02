@@ -1,0 +1,44 @@
+[
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "1789",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "1776",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "1784",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "1771",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "1939-1945",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "1914-1918",
+    "es_correcta": false
+  }
+]
