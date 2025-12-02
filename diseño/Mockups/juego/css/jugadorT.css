@@ -63,6 +63,11 @@ main.avatares h2 {
     margin: 0 6px;
 }
 
+#avatares{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 /* Input */
 input {
     width: 80%;
@@ -161,4 +166,18 @@ footer {
     font-size: 14px;
     color: #FFFFFF;
     margin-top: 15px;
+}
+
+.avatar{
+    width: 70px;    
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover{
+    transform: scale(1.2);
+}
+
+.avatar:active{
+    filter: brightness(0.8);
 }
