@@ -1,0 +1,40 @@
+<!-- FRANCISCO JAVIER MARTINEZ FERNANDEZ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus datos</title>
+    <link rel="stylesheet" href="views/css/stylesPanelP.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="views/img/preguntadawLogo.png" alt="Logo preguntadaw">
+        <h1>Bienvenido [nombre]</h1>
+    </header>
+    <nav>
+    <ul>
+        <li><a href="views/verDatos.html">Tu cuenta</a></li>
+        <li><a href="views/creacion_Juegos.html">Crear juego</a></li>
+        <li><a href="views/gestion_Usuarios.html">Gestionar Usuarios</a></li>
+        <li><a href="views/gestiontemas.html">Temas</a></li>
+        <li><a href="views/gestion_Avatares.html">Avatares</a></li>
+        <li><a href="views/inicio_sesion_admin.html">Cerrar sesion</a></li>
+    </ul>
+</nav>
+    <main>
+        <h1>Recuperar contraseña</h1>
+        <p id="infoCodigo">Introduce el codigo que te ha llegado al correo</p>
+        <section>
+            <form action="modificarContraseña.html" method="post" id="formulario">
+                <label for="codigo">Codigo</label>
+                <input type="text" id="codigo" name="codigo" placeholder="12414">
+                <input type="submit" value="Enviar codigo">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
+    </footer>
+</body>
+</html>
