@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creación de Temas</title>
+        <link rel="stylesheet" href="css/jugadorT.css" />
+    </head>
+    <body>
+        <header>
+            <a href="gestiontemas.html"><button class="boton-volver">⬅ Volver</button></a>
+            <button class="boton-guardar">💾 Guardar cambios</button>
+        </header>
+        <main>
+            <div class="contenedor-principal">
+                <h2>CREACIÓN DE TEMAS</h2>
+                <form>
+                    <label for="nombre-tema" class="texto-label">Nombre del tema</label>
+                    <input id="nombre-tema" type="text"/>
+                    <div class="publico-container">
+                        <label class="switch-label">
+                            Tema público
+                            <span class="descripcion">Permite que otros usuarios puedan encontrar y utilizar tu tema para usarlo en sus juegos</span>
+                        </label>
+                        <label class="switch">
+                            <input type="checkbox"/>
+                        </label>
+                    </div>
+                    <textarea class="descripcion-tema" placeholder="Descripción del tema"></textarea>
+                </form>
+                <button class="botonanadir">CREAR TEMA</button>
+            </div>
+        </main>
+        <footer>
+            Derechos reservados a la Escuela Virgen de Guadalupe
+        </footer>
+    </body>
+</html>
