@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Tema</title>
+    <link rel="stylesheet" href="views/css/usuario.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="views/img/preguntadawLogo.png" alt="Logo preguntadaw">
+        <h1>Tema</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="verDatos.html">Tu cuenta</a></li>
+            <li><a href="creacion_Juegos.html">Crear juego</a></li>
+            <li><a href="gestion_Usuarios.html">Gestionar Usuarios</a></li>
+            <li><a href="index.php?action=listarTemas&controller=controladorTemas">Temas</a></li>
+            <li><a href="gestion_Avatares.html">Avatares</a></li>
+            <li><a href="index.php?action=cerrarSesion&controller=controladorAdministrador">Cerrar sesion</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Biblioteca de Temas</h2>
+            <p class="subtitle">Crea y gestiona tus temas personalizados con sus preguntas</p>
+        </div>
+        <div class="container">
+            <h3>Editar Tema</h3>
+            <form action="index.php?action=modificarTemas&controller=controladorTemas&idTema=<?php echo $datos['idTema']; ?>" method="post">
+                <div class="form-box">
+                    <label>Nombre del Tema</label>
+                    <input type="text" name="nombreTema" value="<?=$datos['nombre']?>">
+                </div>
+                <div class="form-box">
+                    <label>Descripcion del Tema</label>
+                    <input type="text" name="descripcion" value="<?=$datos['descripcion']?>">
+                </div>
+                 <div class="form-box">
+                    <label>Abreviatura</label>
+                    <input type="text" name="abreviatura" value="<?=$datos['abreviatura']?>">
+                </div>
+                <div class="form-box">
+                    <label>Tema Publico</label>
+                    <span class="subtitle">Permite que otros usuarios usar tu tema</span>
+                    <input type="checkbox" name="publico"
+                        <?php if ($datos['publico']) { echo 'checked="checked"'; } ?>
+                    >
+                </div>
+                <div class="buttons-box">
+                    <input type="submit" value="modificar"class="save-btn">
+                </div>
+            </form>
+            <a href="index.php?action=eliminarTema&controller=controladorTemas&idTema=<?php echo $datos['idTema']; ?>">Eliminar Tema</a>
+        </div>
+        <!-- Sección de preguntas: reutiliza estilos .container, .temas-box y .tema-item -->
+        <div class="container">
+            <h3>Preguntas</h3>
+            <p class="subtitle">Lista de preguntas del tema (vista previa)</p>
+            <div class="temas-box">
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 1</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 2</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 3</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 4</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 5</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 6</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 7</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 8</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 9</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+                <div class="tema-item">
+                    <a class="tema-link" href="Modificar_Preguntas.html">Pregunta 10</a>
+                    <button class="delete-btn" type="button">🗑️</button>
+                </div>
+            </div>
+            <div style="margin-top:16px;">
+                <a href="creación_Preguntas.html"><button class="save-btn" type="button">+ Crear pregunta</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
+    </footer>
+</body>
+</html>
