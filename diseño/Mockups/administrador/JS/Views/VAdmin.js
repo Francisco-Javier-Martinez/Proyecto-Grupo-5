@@ -56,33 +56,33 @@ export class VAdmin{
             return;
         }
         
-        // Marcar visualmente
-        elemento.style.border = "5px solid #5e94b9ff";
+        //Para identificar los seleccionados
+        elemento.style.background = "linear-gradient(135deg, #6ab0de, #4a90e2)";
         
-        // Crear elemento seleccionado
+        //Crear elemento seleccionado
         let tema_div = document.createElement("div");
         tema_div.className = "tema-item";
         tema_div.textContent = tema.nombre;
         tema_div.dataset.id = tema.idTema;
         
-        // Botón para eliminar
+        //Botón para eliminar
         tema_div.addEventListener("click", () => {
             this.eliminarTema(tema.idTema, elemento, tema_div);
         });
         
         this.cuadroTemasSeleccionados.appendChild(tema_div);
         
-        // Actualizar contadores
+        //Actualizamos contadores
         this.temasSeleccionados.add(tema.idTema);
         this.contadorSeleccionados++;
         this.actualizarContador();
     }
     
     eliminarTema(idTema, elemento, divSeleccionado) {
-        // Quitar borde
-        elemento.style.border = "none";
+        //Le quitamos el borde
+        elemento.style.background = "#57277B";
         
-        // Eliminar de la lista
+        //Lo quitamos de la lista
         divSeleccionado.remove();
         this.temasSeleccionados.delete(idTema);
         this.contadorSeleccionados--;
@@ -102,15 +102,14 @@ export class VAdmin{
     }
     
     cargarSlide(){
+        //Creación del carrusel 
         var splide = new Splide( '.splide', {
             type : 'loop',
-            perPage : 4,
-            focus : 'center',
+            perPage : 3,    
+            rewind : true,
             wheel : true,
-            } );
-
-            splide.mount();
-
+            pagination: false
+        } );
         splide.mount();
     }
 
@@ -134,6 +133,7 @@ export class VAdmin{
                 if(this.tituloJuego.value == juego.descripcion){
                     this.mostrarAlert("¡El juego ya existe!");
                 }
+                //Enviar el set con el id de los temas para crear el juego (PHP)
             });
         })
     }
