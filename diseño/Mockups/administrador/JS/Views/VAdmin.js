@@ -1,5 +1,3 @@
-
-
 export class VAdmin{
     constructor(){
         console.log("Vista: Constructor ejecutado...");
@@ -12,15 +10,6 @@ export class VAdmin{
         this.tituloJuego = document.getElementById("tituloJuego");
         this.btnCrearJuego = document.getElementById("crearJuego");
     }
-
-    // mostrarTemas(temas){
-    //     temas.forEach(tema => {
-    //         let tema_item = document.createElement("div");
-    //         tema_item.className = "tema-item";
-    //         tema_item.innerHTML = `${tema.nombre}`;
-    //         this.cuadroTemas.appendChild(tema_item);
-    //     });
-    // }
 
     temaAccion(){
         this.style.backgroundColor = "blue";
