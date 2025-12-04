@@ -3,8 +3,12 @@ export class MAdmin {
     
     }
 
-    obtenerTemas(){
-        return fetch('./JS/Data/temas.json').then(r => r.json());
+    async obtenerTemas(){
+        return await fetch('./JS/Data/temas.json').then(r => r.json());
+    }
+
+    async obtenerJuegos(){
+        return await fetch('./JS/Data/juegos.json').then(r => r.json());
     }
     
 }

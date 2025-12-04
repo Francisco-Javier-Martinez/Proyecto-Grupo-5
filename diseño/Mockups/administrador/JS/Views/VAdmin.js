@@ -8,7 +8,9 @@ export class VAdmin{
         this.cuadroTemasSeleccionados = document.getElementById("seleccionados");
         this.alerta = document.getElementById("alert");
         this.contadorSeleccionados = 0;
-        this.temasSeleccionados = new Set(); 
+        this.temasSeleccionados = new Set();
+        this.tituloJuego = document.getElementById("tituloJuego");
+        this.btnCrearJuego = document.getElementById("crearJuego");
     }
 
     // mostrarTemas(temas){
@@ -125,5 +127,15 @@ export class VAdmin{
         }, 3000);
     }
     
+    comprobarJuegos(juegos){
+        this.btnCrearJuego.addEventListener("click", (e) =>{
+            e.preventDefault(); 
+            juegos.forEach(juego => {
+                if(this.tituloJuego.value == juego.descripcion){
+                    this.mostrarAlert("¡El juego ya existe!");
+                }
+            });
+        })
+    }
 }
 

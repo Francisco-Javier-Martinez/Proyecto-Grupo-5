@@ -1,0 +1,66 @@
+[
+  {
+    "idJuego": 1,
+    "descripcion": "Quiz de Historia para principiantes",
+    "codigo": "HIST001",
+    "publico": true,
+    "idUsuario": 2,
+    "fechaCreacion": "2024-01-15T10:30:00Z"
+  },
+  {
+    "idJuego": 2,
+    "descripcion": "Matemáticas divertidas para niños",
+    "codigo": "MATH001",
+    "publico": true,
+    "idUsuario": 2,
+    "fechaCreacion": "2024-02-03T14:20:00Z"
+  },
+  {
+    "idJuego": 3,
+    "descripcion": "Ciencias para estudiantes de secundaria",
+    "codigo": "SCI001",
+    "publico": true,
+    "idUsuario": 3,
+    "fechaCreacion": "2024-01-28T09:15:00Z"
+  },
+  {
+    "idJuego": 4,
+    "descripcion": "Literatura española del siglo XIX",
+    "codigo": "LIT001",
+    "publico": false,
+    "idUsuario": 2,
+    "fechaCreacion": "2024-03-10T16:45:00Z"
+  },
+  {
+    "idJuego": 5,
+    "descripcion": "Geografía de Europa",
+    "codigo": "GEO001",
+    "publico": true,
+    "idUsuario": 3,
+    "fechaCreacion": "2024-02-20T11:10:00Z"
+  },
+  {
+    "idJuego": 6,
+    "descripcion": "Historia del Arte",
+    "codigo": "ART001",
+    "publico": true,
+    "idUsuario": 3,
+    "fechaCreacion": "2024-03-15T13:25:00Z"
+  },
+  {
+    "idJuego": 7,
+    "descripcion": "Música Clásica",
+    "codigo": "MUS001",
+    "publico": false,
+    "idUsuario": 2,
+    "fechaCreacion": "2024-03-18T10:05:00Z"
+  },
+  {
+    "idJuego": 8,
+    "descripcion": "Tecnología e Informática",
+    "codigo": "TEC001",
+    "publico": true,
+    "idUsuario": 3,
+    "fechaCreacion": "2024-03-20T15:40:00Z"
+  }
+]
