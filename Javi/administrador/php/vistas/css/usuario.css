@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Permanent+Marker&display=swap');
+
+/* Estilos base de la página */
+body {
+    background: linear-gradient(to bottom right, #000000, #2F0B4A);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+/* Header */
+header {
+    position: relative;
+    width: 98.67%;/*1492*100/1512=98,67*/
+    align-items: center;
+    padding: 0.66%; /*10*100/1512=0,66*/
+    background-color: rgb(10, 8, 82);
+}
+/*218.89 es lo que ocupa de ancho el h1*/
+header{
+    h1{
+        position: absolute;
+        top:50%;/*En el medio*/
+        /*para que quede perfecto uso left 50% y transform translate -50% -50%
+        que esto lo que hace es situar el punto central del h1 en el punto central de la pantalla*/
+        left:50%;
+        transform: translate(-50%, -50%);
+        /*los 1512-20(paddig) = 1492/2=746
+        pero como el h1 ocupa 218.89 de ancho realmente
+        para que quede centrado le resto la mitad 109.44
+        operacionalmente 746-109.44=636.55px*/ 
+        text-align: center;
+        margin: auto;
+        font-family: "Bitcount Grid Single";
+        font-size: 2em; 
+    }
+}
+/*Menu de navegacion*/
+nav{
+    ul{
+        list-style: none;
+        display: flex; /*Aqui uso un flex para la organizacion del 
+        los elementos del nav
+        */
+        padding: 0;
+        margin: 0;
+        li{
+            /*he decido usar 250px si yo no usase el flex-grow y flex-shrink
+            solo me cabería 6 elementos li en el nav 250*6=1500px uno mas y me pasaria*/
+            flex-basis: 16.53%; 
+            /*250*100/1512=16,53*/
+            /*el flex basis es el width*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            a{
+                font-family: 'News Cycle', sans-serif;
+                background-color: rgb(10, 8, 82);
+                /* ... propiedades existentes ... */
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white; 
+                font-size: 1.5em;
+                display: block;
+                /*tenia problemas de como se veia el texto en los enlaces del nav al agrandar
+                y busque como solucionarlo y vi que con el white-space nowrap puedo
+                decirle que omita los saltos de linea y asi no se me lia*/
+                white-space: nowrap;
+                &:hover{ 
+                    background-color: #3b5f77;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+/*Pie de pagina*/
+footer{
+    background-color: #000000;
+    margin-top:1.32% ;/*20*100/1512=1.32%*/
+    padding: 1.32%; /* 20*100/1512=1.32% */
+    text-align: center;
+    font-size: 1em; 
+}
+/* Contenedor principal blanco */
+.container {
+    background-color: white;
+    max-width: 656px;
+    margin: 30px auto;
+    border-radius: 15px;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos principales */
+h2 {
+    text-align: center;
+    color: #57277B;
+    margin-top: 0;
+    font-family: "Permanent Marker";
+}
+
+/* Subtítulos */
+h3 {
+    color: #57277B;
+    margin-top: 0;
+    font-family: "Archivo Narrow";
+}
+
+/* Texto secundario */
+.subtitle {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Colores base para temas (actualmente comentados) */
+/*
+.rojo{ background-color: red; }
+.azul{ background-color: blue; }
+.verde{ background-color: green; }
+.amarillo{ background-color: yellow; }
+*/
+
+/*Logo*/
+/* Imágenes */
+#logo {
+    width: 5.55%; /*83.92*100/1512=5,55*/
+}
+
+/* Caja de formularios */
+.form-box {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 2.286%; /* 15px / 656px */
+    margin: 2.286% 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para labels de formularios */
+.form-box label {
+    display: block;
+    margin-bottom: 0.799%; /* 5px / 626px */
+    font-weight: bold;
+    color: #57277B;
+}
+
+/* Campos de entrada */
+.form-box input {
+    width: 97.444%; /* 610px / 626px */
+    padding: 1.278%; /* 8px / 626px */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Botón principal */
+.save-btn {
+    background-color: #57277B;
+    color: white;
+    width: 100%;
+    padding: 1.829%; /* 12px / 656px */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 3.049% auto; /* 20px / 656px */
+    transition: 0.3s;
+}
+
+/* Efecto hover del botón */
+.save-btn:hover {
+    background-color: #6a359c;
+}
+
+/* Lista de administradores */
+.admin-list {
+    margin-top: 3.049%; /* 20px / 656px */
+}
+
+/* Caja individual de administrador */
+.admin-box {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 2.286%; /* 15px / 656px */
+    margin: 2.286% 0;
+    transition: 0.3s;
+}
+
+/* Efecto hover en caja de administrador */
+.admin-box:hover {
+    background-color: #e9e9e9;
+}
+
+/* Información del administrador */
+.admin-info h3 {
+    margin-top: 0;
+    margin-bottom: 1.597%; /* 10px / 626px */
+}
+
+/* Detalles del administrador */
+.admin-details {
+    align-items: center;
+    margin: 0.799% 0; /* 5px / 626px */
+    color: gray;
+}
+
+/* Iconos material en detalles */
+.admin-details .material-icons {
+    font-size: 1.125rem;
+    margin-right: 1.278%; /* 8px / 626px */
+    color: #57277B;
+}
+
+
+/* Checkbox para juego público */
+.form-box #checkbox-publico {
+    float: right;
+    width: 3.195%; /* 20px / 626px */
+}
+
+/* Grid de temas */
+.temas-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    gap: 2.396%; /* 15px / 626px */
+    width: 100%;
+}
+
+/* Items individuales de temas */
+.tema-item {
+    width: 100%;
+    background-color: #57277B;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 0.875rem;
+    margin: auto;
+    margin-bottom: 10px;
+    button{
+        background: none;
+        color: white;
+        font-size: 1rem;
+        margin-right: 8px;
+    }
+}
+.tema-link{
+    text-decoration: none;
+    color: white;
+}
+/* Efecto hover en temas */
+.tema-item:hover {
+    transform: scale(1.05);
+}
+.tema-link{
+    p{
+        text-align: center  ;
+    }
+}
+/* Botón de cancelar */
+#cancel {
+    background-color: rgb(169, 27, 27);
+}
+
+/* Efecto hover en cancelar */
+#cancel:hover {
+    background-color: rgb(214, 49, 49);
+}
+
+/* Contenedor para botones en grid */
+.buttons-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Sección comentada de selección de colores */
+/*
+.color{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.color:hover{
+    transform: scale(1.05);
+    border: 2px solid #2F0B4A;
+}
+
+.colors-box{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 10px;
+}
+*/
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: 95%;
+        padding: 1.465%; /* 15px / 1024px */
+    }
+    
+    .container {
+        max-width: 90%;
+        margin: 1.953% auto; /* 20px / 1024px */
+        padding: 1.465%; /* 15px / 1024px */
+    }
+    
+    .form-box {
+        padding: 1.953%; /* 20px / 1024px */
+        margin: 1.953% 0;
+    }
+    
+    .admin-box {
+        padding: 1.953%; /* 20px / 1024px */
+        margin: 1.953% 0;
+    }
+    
+    .temas-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.953%; /* 20px / 1024px */
+    }
+    
+    .tema-item {
+        line-height: 35px;
+        font-size: 0.8rem;
+        margin-bottom: 0.977%; /* 10px / 1024px */
+    }
+    
+    .buttons-box {
+        gap: 1.953%; /* 20px / 1024px */
+    }
+}
+
+
