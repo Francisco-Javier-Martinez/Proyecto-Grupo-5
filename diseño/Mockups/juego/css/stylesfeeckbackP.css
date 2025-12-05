@@ -96,9 +96,21 @@ main a{
     /* Fuente para botones y formularios */
     font-family: 'News Cycle', sans-serif;
 }
+.boton{
+    width: 63.41%; /*520*100/820=63.41%*/
+    display: block;
+    padding: 1.21%; /*10*100/820=1,21*/
+    background-color: rgb(57, 122, 243);
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2em;
+    margin: 2.43% auto;/*20*100/820=2,43*/
+    /* Fuente para botones y formularios */
+    font-family: 'News Cycle', sans-serif;
+}
 
 .boton:hover {
-    color: red;
     transform: scale(1.05);
     background: linear-gradient(135deg, #75aaff, #3a63f7);
 }

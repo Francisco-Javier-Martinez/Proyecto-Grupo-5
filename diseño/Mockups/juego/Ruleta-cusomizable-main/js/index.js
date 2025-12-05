@@ -33,20 +33,20 @@ let suma = 0;
 
 /** Instancias de conceptos que se cargan al iniciar la app */
 const uno = {
-	nombre: "Uno",
-	probabilidad:20
+	nombre: "1",
+	probabilidad: 25
 }
 const dos = {
-	nombre: "Dos",
-	probabilidad: 20
+	nombre: "2",
+	probabilidad: 25
 }
 const tres = {
-	nombre: "Tres",
-	probabilidad: 30
+	nombre: "3",
+	probabilidad: 25
 }
 const cuatro = {
-	nombre: "Cuatro",
-	probabilidad: 30
+	nombre: "4",
+	probabilidad: 25
 }
 
 let conceptos = [uno,dos,tres,cuatro];
@@ -89,10 +89,14 @@ function sortear(){
 /** Desacopla lo que ocurre al terminar de girar la ruleta de la función girar */
 ruleta.addEventListener("animationend", ()=>{
 	ruleta.style.transform = "rotate("+getCurrentRotation(ruleta)+"deg)";
-		ruleta.classList.toggle("girar",false)
-		sorteando=false;
-		ganadorTextoElement.textContent = ganador;
-		clearInterval(animacionCarga);
+	ruleta.classList.toggle("girar",false)
+	sorteando=false;
+	ganadorTextoElement.textContent = ganador;
+	clearInterval(animacionCarga);
+
+	setTimeout(() => {
+            window.location.href = `../seleccion_Preguntas.html?tema=${ganador}`;
+    }, 3000);
 })
 
 

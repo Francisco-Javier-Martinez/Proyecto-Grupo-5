@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Temas</title>
-    <link rel="stylesheet" href="css/jugadorT.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Temas</title>
+        <link rel="stylesheet" href="./css/jugadorT.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=deleteedit" />
+    </head>
+    <body id="gestionTemas">
+        <header>
+            <img id="logo" src="img/preguntadawLogo.png" alt="Logo preguntadaw">
+            <h1>PREGUNTADAW</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="verDatos.html">Tu cuenta</a></li>
+                <li><a href="creacion_Juegos.html">Crear juego</a></li>
+                <li><a href="gestion_Usuarios.html">Gestionar Usuarios</a></li>
+                <li><a href="gestiontemas.html">Temas</a></li>
+                <li><a href="gestion_Avatares.html">Avatares</a></li>
+                <li><a href="inicio_sesion_admin.html">Cerrar sesion</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="contenedor-principal">
+                <div class="grupo-botones">
+                    <a href="creartemas.html"><button>Crear nuevo tema</button></a>
+                </div>
+                <div class="lista-tarjetas">
+                        <div class="tarjeta">
+                            <p class="titulo-tarjeta">CONSUMO RESPONSABLE</p>
+                            <button class="icono eliminar" ><span class="material-symbols-outlined">delete</span></button>
+                            <button class="icono editar"><span class="material-symbols-outlined">edit</span></button>
+                        </div>
+                    
+                        <div class="tarjeta">
+                            <p class="titulo-tarjeta">CONSUMO RESPONSABLE 2</p>
+                            <button class="icono eliminar"><span class="material-symbols-outlined">delete</span></button>
+                            <button class="icono editar"><span class="material-symbols-outlined">edit</span></button>
+                        </div>
 
-<header>
-    <a href="panelAdministrador.html"><button class="boton-volver">⬅ Volver</button></a>
-    <button class="boton-guardar">💾 Guardar cambios</button>
-</header>
-
-<main>
-    <div class="contenedor-principal">
-        <div class="grupo-botones">
-            <a href="creartemas.html"><button>Crear nuevo tema</button></a>
-            <a href="modificacion_Tema.html"><button>Modificar tema</button></a>
-        </div>
-
-        <div class="lista-tarjetas">
-
-            <div class="tarjeta">
-                <span class="icono-borrar">🗑</span>
-                <p class="titulo-tarjeta">CONSUMO RESPONSABLE</p>
+                        <div class="tarjeta">
+                            <p class="titulo-tarjeta">CONSUMO RESPONSABLE 3</p>
+                            <button class="icono eliminar"><span class="material-symbols-outlined">delete</span></button>
+                            <button class="icono editar"><span class="material-symbols-outlined">edit</span></button>
+                        </div>
+                </div>
             </div>
-
-            <div class="tarjeta">
-                <span class="icono-borrar">🗑</span>
-                <p class="titulo-tarjeta">RECICLAJE</p>
-                <p class="autor-tarjeta">by Javier Martínez</p>
-            </div>
-
-            <div class="tarjeta">
-                <span class="icono-borrar">🗑</span>
-                <p class="titulo-tarjeta">AUTOCUIDADO</p>
-                <p class="autor-tarjeta">by Alejandro González</p>
-            </div>
-
-        </div>
-    </div>
-</main>
-
-<footer>
-    Derechos reservados a la Escuela Virgen de Guadalupe
-</footer>
-
-</body>
+        </main>
+        <footer>
+            <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
+        </footer>
+        <script>
+            const botonesEditar = document.querySelectorAll(".editar");
+            botonesEditar.forEach(boton => {
+                boton.addEventListener("click", ()=>{
+                    const titulo = tarjeta.querySelector('.titulo-tarjeta').textContent;
+        
+                    // Enviar datos en url como el método GET
+                    window.location.href = `./modificacion_Tema.html?titulo=${encodeURIComponent(titulo)}`;
+                });
+            });
+            
+        </script>
+    </body>
 </html>

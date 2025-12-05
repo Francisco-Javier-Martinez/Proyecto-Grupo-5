@@ -12,5 +12,166 @@
     "titulo": "Segunda Guerra Mundial",
     "imagen": "",
     "puntuacion": 300
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "titulo": "Descubrimiento de América",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "titulo": "Imperio Romano",
+    "imagen": "",
+    "puntuacion": 250
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "titulo": "Antiguo Egipto",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "titulo": "Ley de la Gravedad",
+    "imagen": "",
+    "puntuacion": 150
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "titulo": "Teoría de la Evolución",
+    "imagen": "",
+    "puntuacion": 250
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "titulo": "Tabla Periódica",
+    "imagen": "",
+    "puntuacion": 300
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "titulo": "Célula Animal vs Vegetal",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "titulo": "Sistema Solar",
+    "imagen": "",
+    "puntuacion": 180
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "titulo": "Literatura del Siglo de Oro",
+    "imagen": "",
+    "puntuacion": 220
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "titulo": "Realismo Mágico",
+    "imagen": "",
+    "puntuacion": 280
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "titulo": "Obras de Shakespeare",
+    "imagen": "",
+    "puntuacion": 300
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "titulo": "Generación del 27",
+    "imagen": "",
+    "puntuacion": 240
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "titulo": "Novela Contemporánea",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "titulo": "Conceptos de Álgebra",
+    "imagen": "",
+    "puntuacion": 180
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "titulo": "Geometría Euclidiana",
+    "imagen": "",
+    "puntuacion": 220
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "titulo": "Teorema de Pitágoras",
+    "imagen": "",
+    "puntuacion": 150
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "titulo": "Cálculo Diferencial",
+    "imagen": "",
+    "puntuacion": 350
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "titulo": "Estadística Básica",
+    "imagen": "",
+    "puntuacion": 200
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "titulo": "Grandes Obras de Arte",
+    "imagen": "",
+    "puntuacion": 250
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "titulo": "Movimientos Artísticos",
+    "imagen": "",
+    "puntuacion": 300
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "titulo": "Arquitectura Moderna",
+    "imagen": "",
+    "puntuacion": 280
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "titulo": "Música Clásica",
+    "imagen": "",
+    "puntuacion": 220
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "titulo": "Cine Contemporáneo",
+    "imagen": "",
+    "puntuacion": 200
   }
 ]

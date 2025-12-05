@@ -6,7 +6,7 @@ export class CAdmin {
         this.cargarTemas();
         this.tomarJuegos();
     }
-    
+     
     async cargarTemas() {
         try {
             console.log("Controlador: Solicitando datos de temas al Modelo...");
@@ -31,5 +31,9 @@ export class CAdmin {
         }catch(error){
             this.vista.mostrarError("Fallo al cargar los juegos.");
         }
+    }
+
+    async crearJuego(titulo,publico,temas,usuario){
+        this.modelo.crearJuego(titulo,publico,temas,usuario);
     }
 }

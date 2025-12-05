@@ -9,6 +9,7 @@ export class VAdmin{
         this.temasSeleccionados = new Set();
         this.tituloJuego = document.getElementById("tituloJuego");
         this.btnCrearJuego = document.getElementById("crearJuego");
+        this.checkJuegoPublico = document.getElementById("checkbox-publico");
     }
 
     temaAccion(){
@@ -98,7 +99,7 @@ export class VAdmin{
             rewind : true,
             wheel : true,
             pagination: false
-        } );
+        } ); 
         splide.mount();
     }
 
@@ -122,7 +123,8 @@ export class VAdmin{
                 if(this.tituloJuego.value == juego.descripcion){
                     this.mostrarAlert("¡El juego ya existe!");
                 }
-                //Enviar el set con el id de los temas para crear el juego (PHP)
+                //Función para crear el juego, php debe tener constancia del id del Usuario
+                //this.controlador.crearJuego(this.tituloJuego.value,this.checkJuegoPublico,this.temasSeleccionados,idUsuario);
             });
         })
     }

@@ -5,30 +5,32 @@ export class MJuego {
     }
 
     // Método que combina preguntas y respuestas
-    async obtenerPreguntasConRespuestas() {
+    async obtenerPreguntasConRespuestas(idTema) {
         try {
-            // Obtener ambas cosas en paralelo
             const [preguntasData, respuestasData] = await Promise.all([
                 fetch('./js/Data/preguntas.json').then(r => r.json()),
                 fetch('./js/Data/respuestas.json').then(r => r.json())
             ]);
 
-            // Combinar los datos
-            const preguntasCompletas = preguntasData.map(pregunta => {
-                // Filtrar respuestas para esta pregunta
+            // Filtrar preguntas por tema
+            const preguntasDelTema = preguntasData.filter(pregunta => 
+                pregunta.idTema === Number(idTema) 
+            );
+
+            // Combinar las preguntas del tema
+            const preguntasCompletas = preguntasDelTema.map(pregunta => {
                 const respuestasPregunta = respuestasData.filter(respuesta => 
                     respuesta.idTema === pregunta.idTema && 
                     respuesta.nPregunta === pregunta.nPregunta
                 );
 
-                // Retornar pregunta con sus respuestas
                 return {
                     ...pregunta,
                     respuestas: respuestasPregunta
                 };
             });
 
-            return preguntasCompletas;
+            return preguntasCompletas; 
         } catch (error) {
             console.error('Error combinando datos:', error);
             throw error;
