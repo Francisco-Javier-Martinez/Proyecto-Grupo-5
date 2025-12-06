@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/../../config/configBD.php';    
+    require_once __DIR__ . '/../../config/configRT.php';    
     //recoger controlador y metodo
     $controlador=$_GET['c'] ?? CONDEF;
     $metodo=$_GET['m'] ?? METDEF;
