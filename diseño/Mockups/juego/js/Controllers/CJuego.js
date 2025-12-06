@@ -32,4 +32,4 @@ export class CJuego {
             this.vista.mostrarError("Fallo al cargar los temas.");
         }
     }
-}
+} 

@@ -7,7 +7,7 @@ import { VFeedback } from './Views/VFeedback.js';
 document.addEventListener('DOMContentLoaded', () => {
     let page = document.body.id;
     const urlParams = new URLSearchParams(window.location.search);
-    const tema = urlParams.get('tema');
+    const tema = parseInt(urlParams.get('tema'));
     console.log(tema);
     switch(page){
         case 'seleccionPreguntas':
@@ -20,6 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
             const vistaFeedback = new VFeedback();
             break;
     }
-    
     console.log('Aplicación MVC inicializada');
 });

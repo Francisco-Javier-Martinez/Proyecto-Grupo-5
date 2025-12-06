@@ -1,7 +1,7 @@
 export class VJuego {
     constructor() {
         console.log("Vista: Constructor ejecutado...");
-        
+
         // Selectores
         this.contenedorPreguntas = document.querySelector(".pregunta-section");
         if (this.contenedorPreguntas) {
@@ -24,10 +24,12 @@ export class VJuego {
 
         const urlParams = new URLSearchParams(window.location.search);
         this.tema = urlParams.get('tema');
+
+        this.respuestaCorrecta = null;
     }
 
     reiniciarJuego(){
-        localStorage.removeItem('contadorPreguntas');
+        localStorage.removeItem('contadorPreguntas');                                                                                                                                                                       
     }
 
     cargarTimer(){
@@ -40,7 +42,7 @@ export class VJuego {
             if (totalSeconds <= 0) {
                 clearInterval(countdown);
                 // Si el tiempo se agota, redirigir al feedback
-                window.location.href = `../juego/feeckback.html?tema=${this.tema}`;
+                window.location.href = `../juego/feeckback.html?tema=${this.tema}&correcta=${this.respuestaCorrecta}`;
             }
         }, 1000);
     }
@@ -55,10 +57,10 @@ export class VJuego {
         // Toma la primera pregunta para mostrar
         if (arrayPreguntas.length > 0) {
             const pregunta = arrayPreguntas[this.contadorPreguntas];
-            
+            localStorage.setItem('respuestaExplicacion', pregunta.explicacion);
             // Crea elementos para la pregunta
             const titulo = `<h2>${pregunta.titulo || 'Sin título'}</h2>`;
-            const imagenHTML = pregunta.imagen && pregunta.imagen !== "" ? 
+            const imagen = pregunta.imagen && pregunta.imagen !== "" ? 
                 `<img src="images/${pregunta.imagen}" alt="${pregunta.titulo}" class="imagen-pregunta">` : 
                 '<div class="cuadro-imagen">[Imagen de la pregunta]</div>';
             
@@ -66,10 +68,10 @@ export class VJuego {
             this.contenedorPreguntas.innerHTML = `
                 ${titulo}
                 <div class="imagen-pregunta-container">
-                    ${imagenHTML}
+                    ${imagen}
                 </div>
                 <div class="respuestas">
-                    <!-- Las respuestas se insertarán aquí -->
+                    
                 </div>
             `;
 
@@ -131,8 +133,11 @@ export class VJuego {
             boton.dataset.esCorrecta = respuesta.es_correcta ? "1" : "0";
             boton.dataset.nLetra = respuesta.nLetra;
             boton.dataset.texto = respuesta.texto;
+
+            if(respuesta.es_correcta=="1"){
+                this.respuestaCorrecta = respuesta.nLetra;
+            }
             
-            // Estilos INLINE para asegurar que se vean
             boton.style.cssText = `
                 background-color: ${this.colores[index % this.colores.length]};
             `;
@@ -151,15 +156,12 @@ export class VJuego {
         const boton = event.currentTarget;
         const esCorrecta = boton.dataset.esCorrecta === "1";
         
-        // CORREGIDO: usa 'boton' en lugar de 'this'
         localStorage.setItem('respuestaCorrecta', esCorrecta);
         localStorage.setItem('respuestaTexto', boton.textContent);
         localStorage.setItem('respuestanLetra', boton.dataset.nLetra);
 
-        // CORREGIDO: obtén TODOS los botones de respuesta
         const todosLosBotones = document.querySelectorAll(".respuesta");
         
-        // Deshabilita todos los botones
         todosLosBotones.forEach(btn => {
             btn.disabled = true;
             btn.style.opacity = "0.7";
@@ -186,8 +188,7 @@ export class VJuego {
         
         // Pasa a la siguiente pregunta
         setTimeout(() => {
-            window.location.href = `../juego/feeckback.html?tema=${this.tema}`;
+            window.location.href = `../juego/feeckback.html?tema=${this.tema}&correcta=${this.respuestaCorrecta}`;
         }, 1000);
     }
-
 }

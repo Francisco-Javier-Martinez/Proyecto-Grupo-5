@@ -56,6 +56,7 @@ let conceptos = [uno,dos,tres,cuatro];
 function sortear(){
 	sorteando = true;
 	ganadorTextoElement.textContent = ".";
+	document.getElementById("sortear").style.display = "none";
 	animacionCarga = setInterval(()=>{
 		switch( ganadorTextoElement.textContent){
 			case ".":
@@ -96,7 +97,7 @@ ruleta.addEventListener("animationend", ()=>{
 
 	setTimeout(() => {
             window.location.href = `../seleccion_Preguntas.html?tema=${ganador}`;
-    }, 3000);
+    }, 1500);
 })
 
 
@@ -141,7 +142,9 @@ function ajustarRuleta (){
 //Eventos de botones
 
 document.getElementById("sortear").addEventListener("click", () => {
-	if(!sorteando) sortear()
+	if(!sorteando) {
+		sortear();
+	}
 })
 
 function onOpcionClicked(i){

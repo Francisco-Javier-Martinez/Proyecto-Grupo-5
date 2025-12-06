@@ -4,6 +4,13 @@ export class VAdmin{
         
     }
     
+    comprobarFormulario(){
+        console.log("Vista: Comprobando formulario...");
+        
+    }
 
+    mostrarError(error){
+        console.error("Error: ",error);
+    }
 }
 
