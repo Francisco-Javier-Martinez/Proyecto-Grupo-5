@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Single:wght@100..900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+/* ===========================
+   VARIABLES
+=========================== */
+:root{
+    --color-secundario: #57277B;
+    --color-tercero: #2F0B4A;
+    --color-cuarto: #293478;
+}
+
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+body {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #2F0B4A);
+    font-family: "Archivo Narrow", sans-serif;
+    color: white;
+    position: relative;
+}
+/* ---- ENCABEZADO ---- */
+
+/* Header */
+header {
+    position: relative;
+    width: 98.67%;/*1492*100/1512=98,67*/
+    grid-area: Encabezado;
+    align-items: center;
+    padding: 0.66%; /*10*100/1512=0,66*/
+    background-color: rgb(10, 8, 82);
+}
+/*218.89 es lo que ocupa de ancho el h1*/
+header{
+    h1{
+        position: absolute;
+        top:50%;/*En el medio*/
+        /*para que quede perfecto uso left 50% y transform translate -50% -50%
+        que esto lo que hace es situar el punto central del h1 en el punto central de la pantalla*/
+        left:50%;
+        transform: translate(-50%, -50%);
+        /*los 1512-20(paddig) = 1492/2=746
+        pero como el h1 ocupa 218.89 de ancho realmente
+        para que quede centrado le resto la mitad 109.44
+        operacionalmente 746-109.44=636.55px*/ 
+        text-align: center;
+        margin: auto;
+        font-family: "Bitcount Grid Single";
+        font-size: 2em; 
+    }
+}
+/*Menu de navegacion*/
+nav{
+    grid-area: MenuNavegacion;
+    ul{
+        list-style: none;
+        display: flex; /*Aqui uso un flex para la organizacion del 
+        los elementos del nav
+        */
+        padding: 0;
+        margin: 0;
+        li{
+            /*he decido usar 250px si yo no usase el flex-grow y flex-shrink
+            solo me cabería 6 elementos li en el nav 250*6=1500px uno mas y me pasaria*/
+            flex-basis: 16.53%; 
+            /*250*100/1512=16,53*/
+            /*el flex basis es el width*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            a{
+                font-family: 'News Cycle', sans-serif;
+                background-color: rgb(10, 8, 82);
+                /* ... propiedades existentes ... */
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: white; 
+                font-size: 1.5em;
+                display: block;
+                /*tenia problemas de como se veia el texto en los enlaces del nav al agrandar
+                y busque como solucionarlo y vi que con el white-space nowrap puedo
+                decirle que omita los saltos de linea y asi no se me lia*/
+                white-space: nowrap;
+                &:hover{ 
+                    background-color: #3b5f77;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+/* Imágenes */
+#logo {
+    width: 5.55%; /*83.92*100/1512=5,55*/
+}
+
+.boton-volver, .boton-guardar {
+    background: #cdd1d9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875em; 
+}
+
+/* ---- CONTENIDO PRINCIPAL ---- */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedor-principal {
+    width: 500px;
+    background: var(--color-tercero);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grupo-botones {
+    display: flex;
+    margin-bottom: 40px;
+    font-family: "News Cycle", sans-serif;
+}
+
+.grupo-botones button {
+    padding: 10px 20px;
+    font-size: 0.875em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: var(--color-cuarto);
+    color: #FFFFFF;
+    margin: 10px;
+    font-family: "News Cycle", sans-serif;
+}
+
+.lista-tarjetas {
+    display: grid;
+    width: 80%;
+}
+
+/* ---- TARJETAS ---- */
+
+.tarjeta {
+    background: var(--color-secundario);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.icono-borrar {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.titulo-tarjeta {
+    margin: 0;
+    font-weight: bold;
+}
+
+.autor-tarjeta {
+    margin-top: 5px;
+    font-size: 0.8125em; 
+}
+.enlace-tarjeta {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color del texto si cambia */
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+/* Además, para que el div.tarjeta tenga el comportamiento visual de "ser un link", 
+puedes añadir un efecto al pasar el ratón (hover): */
+.tarjeta:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil elevación */
+}
+/* ===========================================================
+   NUEVOS ESTILOS PARA LA PÁGINA DE CREACIÓN DE TEMAS
+=========================================================== */
+
+/* --- Título principal --- */
+.contenedor-principal h2 {
+    font-size: 1.5em; 
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Bitcount Grid Single", sans-serif;
+}
+
+/* --- Etiquetas del formulario --- */
+.texto-label {
+    display: block;
+    text-align: left;
+    width: 400px;
+    margin-bottom: 8px;
+    font-size: 1em; 
+}
+
+/* --- Input de texto --- */
+.contenedor-principal input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9375em; 
+    margin-bottom: 25px;
+    background: #ffffff;
+}
+
+/* --- Contenedor de opción de tema público --- */
+.publico-container {
+    width: 400px;
+    background: var(--color-secundario);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch-label {
+    text-align: left;
+    font-size: 1em; 
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.switch-label .descripcion {
+    font-size: 0.8125em; 
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+/* --- Textarea --- */
+.descripcion-tema {
+    width: 400px;
+    height: 120px;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.9375em; 
+    resize: none;
+    background: #ffffff;
+}
+
+/* --- Botón final grande --- */
+.botonanadir {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 0.9375em; 
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--color-cuarto);
+    color: white;
+    transition: 0.2s;
+    font-family: "News Cycle", sans-serif;
+}
+
+/* ---- PIE DE PÁGINA ---- */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.875em; 
+}
