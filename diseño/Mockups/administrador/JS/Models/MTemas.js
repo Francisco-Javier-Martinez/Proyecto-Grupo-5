@@ -1,4 +1,4 @@
-export class MAdmin {
+export class MTemas {
     constructor() {
     
     }

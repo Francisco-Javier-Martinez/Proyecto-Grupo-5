@@ -1,6 +1,5 @@
 export class MJuego {
     constructor() {
-        // RUTA ABSOLUTA o relativa correcta
         this.baseUrl = 'https://24.daw.esvirgua.com/JosephParte/juego/api';
     }
 

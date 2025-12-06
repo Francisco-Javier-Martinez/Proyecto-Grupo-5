@@ -52,16 +52,14 @@
             <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
         </footer>
         <script>
-            const botonesEditar = document.querySelectorAll(".editar");
-            botonesEditar.forEach(boton => {
-                boton.addEventListener("click", ()=>{
+            document.querySelectorAll(".editar").forEach(boton => {
+                boton.addEventListener("click", function() {
+                    const tarjeta = this.closest('.tarjeta');
                     const titulo = tarjeta.querySelector('.titulo-tarjeta').textContent;
-        
-                    // Enviar datos en url como el método GET
-                    window.location.href = `./modificacion_Tema.html?titulo=${encodeURIComponent(titulo)}`;
+                    window.location.href = `modificacion_Tema.html?titulo=${encodeURIComponent(titulo)}`;
                 });
             });
-            
         </script>
+        <script type="module" src="JS/app.js"> </script>
     </body>
 </html>

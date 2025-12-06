@@ -6,7 +6,7 @@
     <title>Modificar Tema</title>
     <link rel="stylesheet" href="css/usuario.css">
 </head>
-<body>
+<body id="modificacionTemas">
     <header>
         <a href="panelAdministrador.html">
             <img id="logo" src="img/preguntadawLogo.png" alt="Logo preguntadaw">
@@ -33,29 +33,12 @@
             <form action="Modificar_Preguntas.html" method="post">
                 <div class="form-box">
                     <label>Nombre del Tema</label>
-                    <input type="text" value="Nombre del tema seleccionado">
+                    <input type="text" value="Nombre del tema seleccionado" id="nombreTema">
                 </div>
                 <div class="form-box">
                     <label>Descripcion del Tema</label>
                     <input type="text" value="Descripcion">
                 </div>
-                <!-- <div class="form-box">
-                    <h3>Color del Tema</h3>
-                    <div class="colors-box">
-                        <div class="color rojo"></div>
-                        <div class="color verde"></div>
-                        <div class="color amarillo"></div>
-                        <div class="color azul"></div>
-                        <div class="color morado"></div>
-                        <div class="color rosa"></div>
-                        <div class="color naranja"></div>
-                        <div class="color cyan"></div>
-                        <div class="color lima"></div>
-                        <div class="color coral"></div>
-                        <div class="color indigo"></div>
-                        <div class="color ocre"></div>
-                    </div>
-                </div> -->
                 <div class="form-box">
                     <label>Tema Publico</label>
                     <span class="subtitle">Permite que otros usuarios usar tu tema</span>
@@ -68,5 +51,6 @@
     <footer>
         <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
     </footer>
+    <script type="module" src="JS/app.js"></script>
 </body>
 </html>

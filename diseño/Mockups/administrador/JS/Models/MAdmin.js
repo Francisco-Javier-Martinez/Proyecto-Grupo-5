@@ -1,11 +1,11 @@
 export class MAdmin {
     constructor() {
-    
+        this.baseUrl = 'https://24.daw.esvirgua.com/JosephParte/administrador/api';
     }
 
-    async obtenerTemas(){
-        //Simulación de bbdd con json, esto llamaria al index.php para traer los datos
-        return await fetch('./JS/Data/temas.json').then(r => r.json());
+    async obtenerTemas() {
+        const response = await fetch(`${this.baseUrl}/consultarTemas.php`);
+        return await response.json();
     }
 
     async obtenerJuegos(){
