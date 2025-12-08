@@ -47,7 +47,6 @@
                 </div>
             </form>
         </div>
-        <!-- Sección de preguntas: reutiliza estilos .container, .temas-box y .tema-item -->
         <div class="container">
             <h3>Preguntas</h3>
             <p class="subtitle">Lista de preguntas del tema clica en el nombre para modificar</p>
@@ -82,3 +81,4 @@
     </footer>
 </body>
 </html>
+
