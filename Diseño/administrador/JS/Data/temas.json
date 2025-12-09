@@ -1,0 +1,203 @@
+[
+  {
+    "idTema": 1,
+    "nombre": "Historia Universal",
+    "descripcion": "Preguntas sobre eventos históricos importantes del mundo",
+    "publico": true,
+    "abreviatura": "HIST_UNIV",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 2,
+    "nombre": "Matemáticas Básicas",
+    "descripcion": "Conceptos fundamentales de aritmética y álgebra",
+    "publico": true,
+    "abreviatura": "MAT_BASIC",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 3,
+    "nombre": "Ciencias Naturales",
+    "descripcion": "Biología, física y química para principiantes",
+    "publico": true,
+    "abreviatura": "CIEN_NAT",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 4,
+    "nombre": "Literatura Española",
+    "descripcion": "Autores y obras importantes de la literatura española",
+    "publico": false,
+    "abreviatura": "LIT_ESP",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 5,
+    "nombre": "Geografía Mundial",
+    "descripcion": "Países, capitales y características geográficas",
+    "publico": true,
+    "abreviatura": "GEO_MUND",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 6,
+    "nombre": "Programación Web",
+    "descripcion": "HTML, CSS, JavaScript y frameworks modernos",
+    "publico": true,
+    "abreviatura": "PROG_WEB",
+    "idUsuario": 1
+  },
+  {
+    "idTema": 7,
+    "nombre": "Anatomía Humana",
+    "descripcion": "Sistemas y órganos del cuerpo humano",
+    "publico": true,
+    "abreviatura": "ANAT_HUM",
+    "idUsuario": 4
+  },
+  {
+    "idTema": 8,
+    "nombre": "Música Clásica",
+    "descripcion": "Compositores y obras maestras de la música clásica",
+    "publico": true,
+    "abreviatura": "MUS_CLAS",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 9,
+    "nombre": "Astronomía",
+    "descripcion": "Planetas, estrellas y fenómenos celestes",
+    "publico": true,
+    "abreviatura": "ASTRONOM",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 10,
+    "nombre": "Cocina Internacional",
+    "descripcion": "Platos típicos y técnicas de cocina de todo el mundo",
+    "publico": true,
+    "abreviatura": "COC_INT",
+    "idUsuario": 4
+  },
+  {
+    "idTema": 11,
+    "nombre": "Deportes Olímpicos",
+    "descripcion": "Historia, disciplinas y récords olímpicos",
+    "publico": true,
+    "abreviatura": "DEP_OLIM",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 12,
+    "nombre": "Mitología Griega",
+    "descripcion": "Dioses, héroes y mitos de la antigua Grecia",
+    "publico": true,
+    "abreviatura": "MIT_GRIEG",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 13,
+    "nombre": "Finanzas Personales",
+    "descripcion": "Ahorro, inversión y gestión del dinero",
+    "publico": false,
+    "abreviatura": "FIN_PER",
+    "idUsuario": 1
+  },
+  {
+    "idTema": 14,
+    "nombre": "Cine de los 90s",
+    "descripcion": "Películas icónicas de la década de 1990",
+    "publico": true,
+    "abreviatura": "CINE_90",
+    "idUsuario": 4
+  },
+  {
+    "idTema": 15,
+    "nombre": "Ecología y Medio Ambiente",
+    "descripcion": "Ecosistemas, conservación y sostenibilidad",
+    "publico": true,
+    "abreviatura": "ECOLOGIA",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 16,
+    "nombre": "Filosofía Occidental",
+    "descripcion": "Pensadores y corrientes filosóficas",
+    "publico": true,
+    "abreviatura": "FIL_OCC",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 17,
+    "nombre": "Robótica Básica",
+    "descripcion": "Conceptos fundamentales de robótica y automatización",
+    "publico": true,
+    "abreviatura": "ROBOTICA",
+    "idUsuario": 1
+  },
+  {
+    "idTema": 18,
+    "nombre": "Arte Moderno",
+    "descripcion": "Movimientos artísticos del siglo XX",
+    "publico": true,
+    "abreviatura": "ART_MOD",
+    "idUsuario": 4
+  },
+  {
+    "idTema": 19,
+    "nombre": "Psicología Básica",
+    "descripcion": "Conceptos fundamentales de la mente y comportamiento",
+    "publico": false,
+    "abreviatura": "PSIC_BAS",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 20,
+    "nombre": "Videojuegos Clásicos",
+    "descripcion": "Historia y curiosidades de los videojuegos retro",
+    "publico": true,
+    "abreviatura": "VID_CLA",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 21,
+    "nombre": "Derecho Constitucional",
+    "descripcion": "Principios fundamentales de las constituciones modernas",
+    "publico": false,
+    "abreviatura": "DER_CONST",
+    "idUsuario": 1
+  },
+  {
+    "idTema": 22,
+    "nombre": "Arquitectura Mundial",
+    "descripcion": "Estilos y monumentos arquitectónicos famosos",
+    "publico": true,
+    "abreviatura": "ARQ_MUND",
+    "idUsuario": 4
+  },
+  {
+    "idTema": 23,
+    "nombre": "Idiomas del Mundo",
+    "descripcion": "Familias lingüísticas y lenguas más habladas",
+    "publico": true,
+    "abreviatura": "IDIOMAS",
+    "idUsuario": 2
+  },
+  {
+    "idTema": 24,
+    "nombre": "Medicina General",
+    "descripcion": "Conceptos básicos de salud y enfermedades comunes",
+    "publico": false,
+    "abreviatura": "MED_GEN",
+    "idUsuario": 3
+  },
+  {
+    "idTema": 25,
+    "nombre": "Marketing Digital",
+    "descripcion": "Estrategias de marketing en internet y redes sociales",
+    "publico": true,
+    "abreviatura": "MARK_DIG",
+    "idUsuario": 1
+  }
+
+]
