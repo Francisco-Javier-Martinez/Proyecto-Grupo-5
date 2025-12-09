@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Creación de Temas</title>
-        <link rel="stylesheet" href="css/jugadorT.css" />
+        <link rel="stylesheet" href="../css/jugadorT.css" />
     </head>
     <body>
         <header>
@@ -21,12 +21,16 @@
                 <li><a href="inicio_sesion_admin.html">Cerrar sesion</a></li>
             </ul>
         </nav>
+
         <main>
             <div class="contenedor-principal">
                 <h2>CREACIÓN DE TEMAS</h2>
+
                 <form>
                     <label for="nombre-tema" class="texto-label">Nombre del tema</label>
                     <input id="nombre-tema" type="text"/>
+                    <p id="error-nombre" class="error-msg"></p>
+
                     <div class="publico-container">
                         <label class="switch-label">
                             Tema público
@@ -36,13 +40,19 @@
                             <input type="checkbox"/>
                         </label>
                     </div>
-                    <textarea class="descripcion-tema" placeholder="Descripción del tema"></textarea>
+
+                    <textarea class="descripcion-tema" id="descripcion-tema" placeholder="Descripción del tema"></textarea>
+                    <p id="error-descripcion" class="error-msg"></p>
                 </form>
+
                 <button class="botonanadir">CREAR TEMA</button>
             </div>
         </main>
+
         <footer>
             Derechos reservados a la Escuela Virgen de Guadalupe
         </footer>
+
+        <script type="module" src="../mvc/js/controller.js"></script>
     </body>
 </html>
