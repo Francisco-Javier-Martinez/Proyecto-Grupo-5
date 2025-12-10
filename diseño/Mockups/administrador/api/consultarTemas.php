@@ -9,4 +9,5 @@
     $temas = $result->fetch_all(MYSQLI_ASSOC);
 
     echo json_encode($temas);
+    
 ?>
