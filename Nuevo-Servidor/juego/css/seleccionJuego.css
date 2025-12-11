@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@400&family=Archivo+Narrow:wght@300;700&display=swap');
+
+:root {
+    --fondo: linear-gradient(to bottom right, #000, #2F0B4A);
+    --tarjeta: #2F0B4A;
+    --boton: #7943A4;
+    --tema1: rgb(240, 129, 221);
+    --tema2: royalblue;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    font-family: 'Archivo Narrow', sans-serif;
+    color: white;
+    /*Para que no se reita el degradado*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 60, 0.6);
+}
+
+header h1 {
+    font-family: "Bitcount Grid Single";
+    font-size: 2rem;
+}
+
+/* TITULO */
+main h2 {
+    text-align: center;
+    font-family: "Bitcount Grid Single";
+    margin-top: 30px;
+}
+
+/* GRID JUEGOS */
+.grid-juegos {
+    width: 85%;
+    margin: auto;
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* TARJETA */
+.tarjeta {
+    background: var(--tarjeta);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    background: #3b1d56;
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estado {
+    background: rgb(134, 193, 241);
+    color: black;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* TEMAS */
+.temas {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.temas button {
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.temas button:nth-child(odd) {
+    background: var(--tema1);
+}
+
+.temas button:nth-child(even) {
+    background: var(--tema2);
+}
+
+/* BOTÓN JUGAR */
+.jugar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 0;
+    background: var(--boton);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.jugar:hover {
+    background: #5c2aa5;
+}
+
+/* CÓDIGO */
+.codigo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.codigo input {
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
