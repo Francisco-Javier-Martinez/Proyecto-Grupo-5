@@ -1,60 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="php/views/css/jc.css">
-    <title>GestiÃ³n de avatares</title>
-</head>
-<body id="gestionAvatares">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Administradores</title>
+    <link rel="stylesheet" href="php/views/css/usuario.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+  <body id="modificarProfesor">
     <header>
-        <a href="panelAdministrador.html"><img id="logo" src="php/views/img/preguntadawLogo.png" alt="Logo preguntadaw"></a>
-        <h1>Avatares</h1>
+      <img id="logo" src="./php/views/img/preguntadawLogo.png" alt="Logo preguntadaw">
+      <h1>Usuarios</h1>
     </header>
-    <main>
-        <section>
-            <article>
-                <img src="php/views/img/imagenesAux/basura.png" alt="basura" class="imgBasura">
-                <img src="php/views/img/avatares/avatar1.png" alt="avatar1" class="imgAvatar">
-                <h4>Personaje 1</h4>
-            </article>
-            <article>
-                <img src="php/views/img/imagenesAux/basura.png" alt="" class="imgBasura">
-                <img src="php/views/img/avatares/avatar2.png" alt="avatar2" class="imgAvatar">
-                <h4>Personaje 2</h4>
-            </article>
-            <article>
-                <img src="php/views/img/imagenesAux/basura.png" alt="" class="imgBasura">
-                <img src="php/views/img/avatares/avatar3.png" alt="avatar3" class="imgAvatar">
-                <h4>Personaje 3</h4>
-            </article>
-            <article>
-                <img src="php/views/img/imagenesAux/basura.png" alt="" class="imgBasura">
-                <img src="php/views/img/avatares/avatar4.png" alt="avatar4" class="imgAvatar">
-                <h4>Personaje 4</h4>
-            </article>
-             <article>
-                <img src="php/views/img/imagenesAux/basura.png" alt="" class="imgBasura">
-                <img src="php/views/img/avatares/avatar5.png" alt="avatar5" class="imgAvatar">
-                <h4>Personaje 5</h4>
-            </article>
-        </section>
+    
+    <nav>
+      <ul>
+        <li><a href="panelAdministrador.html">Panel</a></li>
+        <li><a href="creacion_Juegos.html">Crear juego</a></li>
+        <li><a href="gestion_Usuarios.html">Gestionar Usuarios</a></li>
+        <li><a href="gestiontemas.html">Temas</a></li>
+        <li><a href="gestion_Avatares.html">Avatares</a></li>
+        <li><a href="inicio_sesion_admin.html">Cerrar sesion</a></li>
+      </ul>
+    </nav>
+    
+    <div class="container">
+      <form action="index.php?controller=Administrador&action=modificarAdministrador&id=<?php echo $admin['idUsuario']; ?>" id="modificarUsuario" method="POST">
+        <h2>Modificar Administrador</h2>
+        <p class="subtitle">
+          Solo los super administradores pueden crear nuevos administradores
+        </p>
 
-       <form action="" id="formAvatares">
-            <h1>Crear avatar</h1>
-            <label for="imagenSubidaAvatar">Sube imagen del avatar</label>
-            <input type="file" id="imagenSubidaAvatar" name="imagenSubidaAvatar" required placeholder="imagen">
-            <span id="error-img"></span>
-            <label for="nombreAvatar">Nombre del avatar: </label>
-            <input type="text" id="nombreAvatar" name="nombreAvatar" required placeholder="nombre del Avatar">
-            <span id="error-nombre"></span>
-            <input type="submit" value="crear">
-        </form>
+        <div class="form-box">
+          <label for="userName">Nombre de Usuario *</label>
+          <input type="text" id="userName" name="userName" placeholder="Ej: admin_juan" />
+          <span id="error-userName" class="error-text"></span> 
+        </div>
 
-    </main>
+        <div class="form-box">
+          <label for="email">Correo Electrónico *</label>
+          <input type="email" id="email" name="email" placeholder="admin@ejemplo.com" />
+          <span id="error-email" class="error-text"></span> 
+        </div>
+
+        <button type="submit" class="save-btn">Guardar Modificación</button>
+      </form>
+    </div>
+
     <footer>
-        <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
+      <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
     </footer>
+
     <script type="module" src="javaScript/app.js"></script>
-</body>
+  </body>
 </html>

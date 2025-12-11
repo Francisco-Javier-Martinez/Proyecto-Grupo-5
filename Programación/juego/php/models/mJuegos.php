@@ -4,26 +4,17 @@
     class Mjuegos extends Conexion{
         
         public function obtenerJuegosPublicos(){
-            //consulta para obtener juegos publicos junto con sus temas
-            //nos la ha tenido que dar la ia porque nos eramos capaces de hacerla
-            //la idea es usar GROUP_CONCAT para juntar los nombres de los temas en una sola columna separados por |
-            //segun la explicacion de la ia
+            //consulta para obtener juegos publicos
+            //se obtienen los juegos por separado y luego sus temas
             $sql = "
                 SELECT
                     juego.idJuego,
                     juego.descripcion AS titulo,
-                    juego.publico,
-                    GROUP_CONCAT(tema.nombre ORDER BY tema.nombre SEPARATOR '|') AS temas_nombres
+                    juego.publico
                 FROM
                     juego
-                JOIN
-                    temas_juegos ON juego.idJuego = temas_juegos.idJuego
-                JOIN
-                    tema ON temas_juegos.idTema = tema.idTema
                 WHERE
                     juego.publico = 1
-                GROUP BY
-                    juego.idJuego, juego.descripcion, juego.publico
                 ORDER BY
                     juego.idJuego;
             ";
@@ -31,12 +22,42 @@
             try {
                 $stmt = $this->conexion->prepare($sql);
                 $stmt->execute();
-                // Devuelve todos los juegos públicos con sus temas concatenados.
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $juegos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                // Para cada juego, obtener sus temas asociados
+                foreach ($juegos as &$juego) {
+                    $sqlTemas = "
+                        SELECT
+                            tema.nombre
+                        FROM
+                            tema
+                        JOIN
+                            temas_juegos ON tema.idTema = temas_juegos.idTema
+                        WHERE
+                            temas_juegos.idJuego = :idJuego
+                        ORDER BY
+                            tema.nombre;
+                    ";
+                    
+                    try {
+                        $stmtTemas = $this->conexion->prepare($sqlTemas);
+                        $stmtTemas->bindParam(':idJuego', $juego['idJuego'], PDO::PARAM_INT);
+                        $stmtTemas->execute();
+                        $temas = $stmtTemas->fetchAll(PDO::FETCH_COLUMN);
+                        
+                        // Devolver array de temas directamente, sin concatenar
+                        $juego['temas'] = $temas;
+                    } catch (PDOException $e) {
+                        error_log("Error al obtener temas del juego: " . $e->getMessage());
+                        $juego['temas'] = [];
+                    }
+                }
+                
+                return $juegos;
             } catch (PDOException $e) {
                 // Manejo de errores
                 error_log("Error al obtener juegos públicos: " . $e->getMessage());
-                return []; // Retorna un array vacío en caso de error
+                return false;
             }
         }
         //metodo para buscar un juego por su codigo

@@ -6,6 +6,7 @@
     <title>Gestión de Administradores</title>
     <link rel="stylesheet" href="php/views/css/usuario.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body id="profesores">    
     <header>
@@ -42,14 +43,14 @@
             <div class="form-box">
                 <label for="userName">Nombre de Usuario *</label>
                 <input type="text" id="userName" name="nombre" placeholder="Ej: admin_juan" 
-                      value="<?php echo isset($_POST['nombre']) ? htmlspecialchars($_POST['nombre']) : ''; ?>" />
+                    value="<?php echo isset($_POST['nombre']) ? htmlspecialchars($_POST['nombre']) : ''; ?>" />
                 <span id="error-userName" class="error-text"></span> 
             </div>
 
             <div class="form-box">
                 <label for="email">Correo Electrónico *</label>
                 <input type="email" id="email" name="email" placeholder="admin@ejemplo.com"
-                      value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" />
+                    value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>" />
                 <span id="error-email" class="error-text"></span> 
             </div>
 
@@ -93,11 +94,13 @@
                                 </p>
                             <?php endif; ?>
                             <div class="admin-actions">
-                                <p class="icono"><a href="index.php?controller=Administrador&action=editarAdministrador&id=<?php echo $admin['idUsuario']; ?>" 
-                                  >Editar</a></p>
-                                <p class="icono"><a href="index.php?controller=Administrador&action=eliminarAdministrador&id=<?php echo $admin['idUsuario']; ?>" 
-                                  
-                                  onclick="return confirm('¿Seguro que quieres eliminar este administrador?')">Eliminar</a></p>
+                                
+                                    <a class="icono" href="index.php?controller=Administrador&action=editarAdministrador&id=<?php echo $admin['idUsuario']; ?>" 
+                                    ><span class="material-symbols-outlined">edit</span></a>
+                                
+                                    <a class="icono" href="index.php?controller=Administrador&action=eliminarAdministrador&id=<?php echo $admin['idUsuario']; ?>" 
+                                    onclick="return confirm('¿Seguro que quieres eliminar este administrador?')"><span class="material-symbols-outlined">delete</span></a>
+                                
                             </div>
                         </div>
                     </div>

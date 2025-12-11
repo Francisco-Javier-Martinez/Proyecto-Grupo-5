@@ -6,7 +6,7 @@
             parent::__construct();
         }
         
-        public function añadir($nombre,$contrasenia,$email,$tipo){
+        public function añadirAdministrador($nombre,$contrasenia,$email,$tipo){
             try{
                 $contrasenia_hash = password_hash($contrasenia, PASSWORD_DEFAULT);
             
@@ -17,7 +17,7 @@
                 $stmt->bindValue(1, $nombre, PDO::PARAM_STR);
                 $stmt->bindValue(2, $contrasenia_hash, PDO::PARAM_STR);
                 $stmt->bindValue(3, $email, PDO::PARAM_STR);
-                $stmt->bindValue(4, $tipo, PDO::PARAM_INT);
+                $stmt->bindValue(4, 0, PDO::PARAM_INT);
                 
                 $stmt->execute();
                 
@@ -28,30 +28,67 @@
             
         }
 
-        public function eliminar($id){
-            try{
-                $sql = "DELETE FROM Usuarios WHERE idUsuario = ?";
-
-                $stmt = $this->conexion->prepare($sql);
-
-                return $stmt->execute([$id]);
-
-            }catch(PDOException $e){
+        public function eliminarAdministrador($id) {
+            try {
+                // PRIMERO: Eliminar los rankings de los juegos de este usuario
+                $sql1 = "DELETE r FROM ranking r 
+                        INNER JOIN juego j ON r.idJuego = j.idJuego 
+                        WHERE j.idUsuario = ?";
+                $stmt1 = $this->conexion->prepare($sql1);
+                $stmt1->execute([$id]);
+                
+                // SEGUNDO: Eliminar los juegos de este usuario
+                $sql2 = "DELETE FROM juego WHERE idUsuario = ?";
+                $stmt2 = $this->conexion->prepare($sql2);
+                $stmt2->execute([$id]);
+                
+                // TERCERO: Eliminar los temas creados por este usuario (si son NULL, se quedan)
+                $sql3 = "UPDATE tema SET idUsuario = NULL WHERE idUsuario = ?";
+                $stmt3 = $this->conexion->prepare($sql3);
+                $stmt3->execute([$id]);
+                
+                // CUARTO: Ahora sí eliminar el usuario
+                $sql4 = "DELETE FROM usuarios WHERE idUsuario = ?";
+                $stmt4 = $this->conexion->prepare($sql4);
+                $resultado = $stmt4->execute([$id]);
+                
+                return $resultado;
+                
+            } catch (PDOException $e) {
                 return 'Code error: ' . $e->getCode() . ' Mensaje error: ' . $e->getMessage();
             }
         }
 
-        public function modificar($id, $nombre, $email, $tipo) {
+        public function modificarAdministrador($id, $nombre, $email) {
             try {
-                $sql = "UPDATE Usuarios SET nombre = ?, email = ?, tipo = ? WHERE idUsuario = ?";
+                $sql = "UPDATE Usuarios SET nombre = ?, email = ? WHERE idUsuario = ?";
                 
                 $stmt = $this->conexion->prepare($sql);
-                $stmt->execute([$nombre, $email, $tipo, $id]);
+                $stmt->execute([$nombre, $email, $id]);
                 
                 if($stmt->rowCount()>0){
                     return true;
                 }else{
                     return "No se pudo modificar la pregunta";
+                }
+            } catch (PDOException $e) {
+                return 'Code error: ' . $e->getCode() . ' Mensaje error: ' . $e->getMessage();
+            }
+        }
+
+        public function traerAdministrador($id) {
+            try {
+                $sql = "SELECT * FROM Usuarios WHERE idUsuario = ? AND tipo = 0";
+                
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->execute([$id]);
+                
+                $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+                
+                if ($resultado) {
+                    return $resultado;
+                } else {
+                    return false; 
                 }
                 
             } catch (PDOException $e) {

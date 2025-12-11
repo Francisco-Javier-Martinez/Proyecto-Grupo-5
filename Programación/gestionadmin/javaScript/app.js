@@ -8,8 +8,11 @@ import { CTemas } from './controllers/CTemas.js';
 
 import { VanadirProfesores } from './views/vanadirProfesores.js';
 import { RegistroAdmin} from './views/registroAdmin.js';
-let page = document.body.id; //Toma el id del body de la pagina para hacer el switchs
 
+import { VmodificarProfesores } from './views/vmodificarProfesor.js';
+
+let page = document.body.id; //Toma el id del body de la pagina para hacer el switchs
+console.log(page);
 switch(page){
     case 'creacionJuegos':
         const modelo = new MAdmin();
@@ -26,13 +29,19 @@ switch(page){
         break;
     //caso para añadir profesores
     case 'profesores':
-        const vanadirProfesores = new VanadirProfesores();        
+        const vistaProfesores = new VanadirProfesores();
+        console.log('Controlador de Profesores inicializado');
         break;
     case 'loginAdmin':
         const registroAdmin = new RegistroAdmin();
         break;
+    case 'modificarProfesor':
+        const modificarProfesores = new VmodificarProfesores();
+        console.log('Vista Modificar inicializando');
+        break;
     default:
         console.log('Página no reconocida por la aplicación MVC');
         break;
+        
 }
 console.log('Aplicación MVC inicializada');

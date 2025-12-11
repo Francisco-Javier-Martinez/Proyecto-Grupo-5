@@ -116,7 +116,6 @@ export class VJuego {
     mostrarRespuestas(respuestasArray) {
         // Limpia el contenedor de respuestas
         if (!this.contenedorRespuestas) {
-            
             // Intenta encontrar el contenedor de nuevo
             this.contenedorRespuestas = document.querySelector(".respuestas");
             
