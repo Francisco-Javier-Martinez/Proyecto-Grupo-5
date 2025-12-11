@@ -26,9 +26,8 @@
     </nav>
     
     <div class="container">
-        <!-- Mostrar mensajes de error/éxito -->
         <?php if (isset($mensajeError) && !empty($mensajeError)): ?>
-            <div class="mensaje <?php echo (strpos($mensajeError, 'creado') !== false || strpos($mensajeError, 'correctamente') !== false) ? 'exito' : 'error'; ?>">
+            <div id="alert" class="mostrar <?php echo (strpos($mensajeError, 'creado') !== false || strpos($mensajeError, 'correctamente') !== false) ? 'exito' : 'error'; ?>">
                 <?php echo htmlspecialchars($mensajeError); ?>
             </div>
         <?php endif; ?>
@@ -39,7 +38,6 @@
                 Solo los super administradores pueden crear nuevos administradores
             </p>
 
-            <!-- CAMBIÉ LOS NAME PARA QUE COINCIDAN CON EL CONTROLADOR -->
             <div class="form-box">
                 <label for="userName">Nombre de Usuario *</label>
                 <input type="text" id="userName" name="nombre" placeholder="Ej: admin_juan" 

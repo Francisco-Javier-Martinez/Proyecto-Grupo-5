@@ -32,7 +32,7 @@ export class VInicio{
             imagen.setAttribute("data-nombre", avatar.nombre);
             
             // También puedes usar dataset directamente
-            // imagen.dataset.nombre = avatar.nombre;
+            imagen.dataset.nombre = avatar.nombre;
             
             imagen.alt = avatar.nombre;
             imagen.style.width = "100px";

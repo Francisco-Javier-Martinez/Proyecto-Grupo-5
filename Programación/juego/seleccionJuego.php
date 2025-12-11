@@ -9,7 +9,7 @@
 <body id="elegirJuego">
 
 <header>
-    <h1>BIENVENIDO, +nombreJugador</h1>
+    <h1 id="nombreJugador">BIENVENIDO, +nombreJugador</h1>
 </header>
 
 <main>

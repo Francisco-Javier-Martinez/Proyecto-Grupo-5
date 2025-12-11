@@ -96,8 +96,3 @@ export class VmodificarProfesores {
         return formularioValido;
     }
 }
-
-// Instanciar la clase cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-    new VmodificarProfesores();
-});

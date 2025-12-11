@@ -12,7 +12,9 @@ import { RegistroAdmin} from './views/registroAdmin.js';
 import { VmodificarProfesores } from './views/vmodificarProfesor.js';
 
 let page = document.body.id; //Toma el id del body de la pagina para hacer el switchs
-console.log(page);
+
+console.log("ID PAGINA:",page);
+
 switch(page){
     case 'creacionJuegos':
         const modelo = new MAdmin();
@@ -30,7 +32,6 @@ switch(page){
     //caso para añadir profesores
     case 'profesores':
         const vistaProfesores = new VanadirProfesores();
-        console.log('Controlador de Profesores inicializado');
         break;
     case 'loginAdmin':
         const registroAdmin = new RegistroAdmin();

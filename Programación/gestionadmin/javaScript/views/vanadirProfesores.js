@@ -1,5 +1,8 @@
 export class VanadirProfesores {
     constructor() {
+
+        console.log("Iniciando Vista Añadir Profesores");
+
         // Callbacks para el controlador
         this.onCrearProfesor = null;
         this.onActualizarProfesor = null;
@@ -28,10 +31,13 @@ export class VanadirProfesores {
             this.formCrearUsuario.addEventListener('submit', (e) => this.manejarEnvio(e));
         }
 
+
         // Validación de email en tiempo real
         if (this.inputEmail) {
             this.inputEmail.addEventListener('blur', (e) => this.validarEmailEnTiempoReal(e));
         }
+
+        this.inicializarAutoOcultarAlertas();
     }
     
     /**
@@ -103,15 +109,7 @@ export class VanadirProfesores {
         e.preventDefault();
 
         if (this.validarFormulario()) {
-            const datos = {
-                userName: this.inputUserName.value.trim(),
-                email: this.inputEmail.value.trim(),
-                password: this.inputPassword.value
-            };
-
-            if (this.onCrearProfesor) {
-                this.onCrearProfesor(datos);
-            }
+            this.formCrearUsuario.submit();
         } else {
             console.log("Formulario inválido");
         }
@@ -168,6 +166,43 @@ export class VanadirProfesores {
         }
 
         return formularioValido;
+    }
+
+    inicializarAutoOcultarAlertas() {
+        // Buscar todas las alertas en la página
+        const alertas = document.querySelectorAll('#alert.mostrar');
+        
+        // Configurar temporizador para cada alerta
+        alertas.forEach(alerta => {
+            this.configurarTemporizadorAlerta(alerta);
+        });
+    }
+    
+    /**
+     * Configurar temporizador para ocultar una alerta específica
+     */
+    configurarTemporizadorAlerta(alerta) {
+        // Esperar 3 segundos (3000ms) y luego ocultar
+        setTimeout(() => {
+            this.ocultarAlerta(alerta);
+        }, 3000); // 3 segundos
+    }
+    
+    /**
+     * Ocultar una alerta específica con animación
+     */
+    ocultarAlerta(alerta) {
+        if (alerta && alerta.classList.contains('mostrar')) {
+            // Primero quitar la clase 'mostrar' para la animación de salida
+            alerta.classList.remove('mostrar');
+            
+            // Esperar a que termine la animación CSS (0.5s) y luego eliminar
+            setTimeout(() => {
+                if (alerta.parentNode) {
+                    alerta.remove();
+                }
+            }, 500); // Tiempo de la animación CSS
+        }
     }
 
     /**

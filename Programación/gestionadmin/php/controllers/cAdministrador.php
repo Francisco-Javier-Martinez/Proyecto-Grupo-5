@@ -63,7 +63,7 @@ class CAdministrador {
             $resultado = $this->modelo->añadirAdministrador($nombre, $contrasenia, $email, $tipo);
 
             if (is_numeric($resultado)) {
-                header("Location: index.php?controller=Administrador&action=listarAdministradores&mensaje=Administrador creado");
+                header("Location: index.php?controller=Administrador&action=listarAdministradores&mensaje=true");
                 exit();
             } else {
                 $this->mensaje = "Error: " . $resultado;
