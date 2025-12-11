@@ -23,23 +23,6 @@ export class VmodificarProfesores {
             this.borrarAccesoBtn.addEventListener('click', (e) => this.manejarBorrarAcceso(e));
         }
     }
-    
-    // Método auxiliar para mostrar el error visualmente
-    mostrarError(inputElement, errorElement, mensaje) {
-        // Verifica si el elemento existe antes de manipularlo
-        if (inputElement) inputElement.style.border = '2px solid red';
-        if (errorElement) {
-            errorElement.style.color = 'red';
-            errorElement.style.paddingTop = '5px';
-            errorElement.textContent = mensaje;
-        }
-    }
-
-    // Método para limpiar los errores visuales
-    limpiarError(inputElement, errorElement) {
-        if (inputElement) inputElement.style.border = '1px solid #ced4da'; 
-        if (errorElement) errorElement.textContent = '';
-    }
 
     // Método que maneja el envío del formulario de modificación
     manejarEnvio(e) {
@@ -94,5 +77,15 @@ export class VmodificarProfesores {
 
         // ¡IMPORTANTE: Retornar el valor!
         return formularioValido;
+    }
+
+    mostrarAdmin(admin){
+        this.inputUserName.value = admin.nombre;
+        this.inputEmail.value = admin.email;
+        console.log("Admin introducido correctamente");
+    }
+
+    mostrarError(mensaje){
+        console.error("Error: ",mensaje)
     }
 }

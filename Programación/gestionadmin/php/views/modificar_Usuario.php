@@ -23,30 +23,30 @@
         <li><a href="inicio_sesion_admin.html">Cerrar sesion</a></li>
       </ul>
     </nav>
-    
-    <div class="container">
-      <form action="index.php?controller=Administrador&action=modificarAdministrador&id=<?php echo $admin['idUsuario']; ?>" id="modificarUsuario" method="POST">
-        <h2>Modificar Administrador</h2>
-        <p class="subtitle">
-          Solo los super administradores pueden crear nuevos administradores
-        </p>
+    <main>
+      <div class="container">
+        <form action="index.php?controller=Administrador&action=modificarAdministrador&id=<?php echo $admin['idUsuario']; ?>" id="modificarUsuario" method="POST">
+          <h2>Modificar Administrador</h2>
+          <p class="subtitle">
+            Solo los super administradores pueden crear nuevos administradores
+          </p>
 
-        <div class="form-box">
-          <label for="userName">Nombre de Usuario *</label>
-          <input type="text" id="userName" name="userName" placeholder="Ej: admin_juan" />
-          <span id="error-userName" class="error-text"></span> 
-        </div>
+          <div class="form-box">
+            <label for="userName">Nombre de Usuario *</label>
+            <input type="text" id="userName" name="userName" placeholder="Ej: admin_juan" />
+            <span id="error-userName" class="error-text"></span> 
+          </div>
 
-        <div class="form-box">
-          <label for="email">Correo Electrónico *</label>
-          <input type="email" id="email" name="email" placeholder="admin@ejemplo.com" />
-          <span id="error-email" class="error-text"></span> 
-        </div>
+          <div class="form-box">
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="admin@ejemplo.com" />
+            <span id="error-email" class="error-text"></span> 
+          </div>
 
-        <button type="submit" class="save-btn">Guardar Modificación</button>
-      </form>
-    </div>
-
+          <button type="submit" class="save-btn">Guardar Modificación</button>
+        </form>
+      </div>
+    </main>
     <footer>
       <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
     </footer>

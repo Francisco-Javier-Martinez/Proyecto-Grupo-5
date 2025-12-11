@@ -3,8 +3,7 @@ export class CAdmin {
         this.modelo = modelo;
         this.vista = vista;
         console.log('Controlador: Inicializado.');
-        this.cargarTemas();
-        this.tomarJuegos();
+        
     }
     
     async cargarTemas() {
@@ -39,6 +38,19 @@ export class CAdmin {
 
     async registroInstalacion(){
         
+    }
+
+    async tomarAdministrador() {
+        try {
+            console.log("Controlador: Solicitando datos de admin al Modelo...");
+            const admin = await this.modelo.obtenerAdministrador();
+            console.log("Controlador: Datos de admin recibidos del Modelo");
+            console.log("Controlador: Enviando datos de admin a la Vista...");
+            this.vista.mostrarAdmin(admin);
+            console.log("Controlador: Datos de admin enviados a la Vista");
+        } catch (error) {
+            this.vista.mostrarError("Fallo al cargar Administrador.");
+        }
     }
 
 }

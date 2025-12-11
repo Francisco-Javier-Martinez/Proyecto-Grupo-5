@@ -4,17 +4,19 @@ export class MAdmin {
     }
 
     async obtenerTemas() {
-        const response = await fetch(`${this.baseUrl}/index.php$controller=Temas?action=listarTemas`);
+        const response = await fetch("http://localhost/Pruebas/Proyecto-Grupo-5/Programación/gestionadmin/php/api/consultarTemas.php");
         return await response.json();
-    }
-
-    async obtenerJuegos(){
-        //Simulación de bbdd con json, esto llamaria al index.php para traer los datos
-        return await fetch('./JS/Data/juegos.json').then(r => r.json());
     }
 
     async crearJuego(titulo,publico,temas,usuario){
         //Aqui hay que llamar al index.php para crear el juego
+    }
+
+    async obtenerAdministrador() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        const response = await fetch(`http://localhost/Pruebas/Proyecto-Grupo-5/Programación/gestionadmin/php/api/consultarAdmin.php?id=${id}`);
+        return await response.json();
     }
     
 } 

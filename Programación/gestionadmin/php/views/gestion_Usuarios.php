@@ -13,11 +13,12 @@
         <img id="logo" src="/php/views/img/preguntadawLogo.png" alt="Logo preguntadaw">
         <h1>Usuarios</h1>
     </header>
-    
+    <main>
+
     <nav>
         <ul>
             <li><a href="index.php?controller=Administrador&action=panelAdministrador">Panel</a></li>
-            <li><a href="creacion_Juegos.html">Crear juego</a></li>
+            <li><a href="./php/views/creacion_Juegos.html">Crear juego</a></li>
             <li><a href="index.php?controller=Administrador&action=listarAdministradores">Gestionar Usuarios</a></li>
             <li><a href="gestiontemas.html">Temas</a></li>
             <li><a href="gestion_Avatares.html">Avatares</a></li>
@@ -108,7 +109,7 @@
             <?php endif; ?>
         </div>
     </div>
-    
+    </main>
     <footer>
         <p>Derechos reservados a la - @Escuela Virgen de Guadalupe</p>
     </footer>

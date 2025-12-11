@@ -16,10 +16,12 @@ let page = document.body.id; //Toma el id del body de la pagina para hacer el sw
 console.log("ID PAGINA:",page);
 
 switch(page){
+    
     case 'creacionJuegos':
         const modelo = new MAdmin();
         const vista = new VAdmin();
         const controlador = new CAdmin(modelo, vista);
+        controlador.cargarTemas();
         break;
     case 'modificacionTemas':
         console.log('Aplicación TEMA inicializada');
@@ -38,6 +40,9 @@ switch(page){
         break;
     case 'modificarProfesor':
         const modificarProfesores = new VmodificarProfesores();
+        const modeloM = new MAdmin();
+        const controladorM = new CAdmin(modeloM,modificarProfesores);
+        controladorM.tomarAdministrador();
         console.log('Vista Modificar inicializando');
         break;
     default:
