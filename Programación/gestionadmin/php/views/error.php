@@ -8,7 +8,7 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <h1 style="color: red;">❌ ¡ERROR! ❌</h1>
+        <h1 style="color: red;"> ¡ERROR! </h1>
         <h2>Ha ocurrido un problema al procesar tu solicitud.</h2>
         
         <?php 

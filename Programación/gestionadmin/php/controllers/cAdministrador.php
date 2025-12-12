@@ -24,27 +24,29 @@ class CAdministrador {
     }
     
     function iniciarSesion() {
-        $this->vista = "inicio_sesion_admin.php";
+    $this->vista = "inicio_sesion_admin.php";
 
-        if (!empty($_POST['email']) && !empty($_POST['password'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-            $resultado = $this->modelo->iniciarSesion($email);
+        $resultado = $this->modelo->iniciarSesion($email);
 
-            if ($resultado && password_verify($password, $resultado["contrasenia"])) {
-                $this->mensaje = "SESIÓN INICIADA CORRECTAMENTE";
-                $this->vista = "panelAdministrador.php";
-                $_SESSION['idUsuario'] = $resultado['idUsuario'];
-                $_SESSION['nombre'] = $resultado['nombre'];
-                $_SESSION['tipo'] = $resultado['tipo'];
-            } else {
-                $this->mensaje = "Usuario o contraseña incorrectos";
-            }
+        if ($resultado && password_verify($password, $resultado["contrasenia"])) {
+            $_SESSION['idUsuario'] = $resultado['idUsuario'];
+            $_SESSION['nombre'] = $resultado['nombre'];
+            $_SESSION['tipo'] = $resultado['tipo'];
+            
+            // Redirigir directamente a listar juegos
+            header("Location: index.php?controller=Juego&action=listarJuegos");
+            exit();
         } else {
-            $this->mensaje = "FALTAN DATOS OBLIGATORIOS";
+            $this->mensaje = "Usuario o contraseña incorrectos";
         }
+    } else {
+        $this->mensaje = "FALTAN DATOS OBLIGATORIOS";
     }
+}
 
     function añadirAdministrador() {
         $this->vista = "gestion_Usuarios.php";
@@ -92,32 +94,56 @@ class CAdministrador {
     }
 
     function editarAdministrador() {
-        $this->vista = "modificar_Usuario.php";
-        
         $id = $_GET['id'] ?? 0;
         
+        // Si es una petición GET, mostrar formulario con datos actuales
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && $id > 0) {
+            $this->vista = "modificar_Usuario.php";
+            $administrador = $this->modelo->traerAdministrador($id);
+            
+            if ($administrador) {
+                return ['administrador' => $administrador];
+            } else {
+                $this->mensaje = "Administrador no encontrado";
+                header("Location: index.php?controller=Administrador&action=listarAdministradores");
+                exit();
+            }
+        }
+        
+        // Si es una petición POST, procesar la actualización
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $nombre = trim($_POST['nombre'] ?? '');
-            $email = trim($_POST['email'] ?? '');
             $id = $_POST['id'] ?? 0;
+            $nombre = trim($_POST['userName'] ?? '');
+            $email = trim($_POST['email'] ?? '');
             
             if (empty($nombre) || empty($email) || empty($id)) {
                 $this->mensaje = "Datos incompletos";
-                return ['administrador' => null];
+                $this->vista = "modificar_Usuario.php";
+                
+                // CORRECCIÓN: Usar traerAdministrador
+                $administrador = $this->modelo->traerAdministrador($id);
+                return ['administrador' => $administrador];
             }
             
-            $resultado = $this->modelo->modificarAdministrador($id, $nombre, $email, 0);
+            // CORRECCIÓN: Pasar solo 3 parámetros
+            $resultado = $this->modelo->modificarAdministrador($id, $nombre, $email);
             
             if ($resultado === true) {
                 header("Location: index.php?controller=Administrador&action=listarAdministradores&mensaje=Administrador actualizado");
                 exit();
             } else {
                 $this->mensaje = $resultado;
-                return ['administrador' => null];
+                $this->vista = "modificar_Usuario.php";
+                
+                // CORRECCIÓN: Usar traerAdministrador
+                $administrador = $this->modelo->traerAdministrador($id);
+                return ['administrador' => $administrador];
             }
         }
         
-        return ['administrador' => null];
+        // Si no es GET ni POST válido, redirigir
+        header("Location: index.php?controller=Administrador&action=listarAdministradores");
+        exit();
     }
 
     function panelAdministrador() {

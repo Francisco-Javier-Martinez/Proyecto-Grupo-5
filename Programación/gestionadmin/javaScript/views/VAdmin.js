@@ -10,7 +10,37 @@ export class VAdmin{
         this.tituloJuego = document.getElementById("tituloJuego");
         this.btnCrearJuego = document.getElementById("crearJuego");
         this.checkJuegoPublico = document.getElementById("checkbox-publico");
+        this.form = document.getElementById("formCrearJuego");
+        this.temasInput = document.getElementById("temasSeleccionadosInput");
+        this.configurarFormulario();
     }
+
+    configurarFormulario() {
+        // Manejar envío del formulario
+        this.form.addEventListener("submit", (e) => this.validarYEnviar(e));
+    }
+
+    validarYEnviar(e) {
+        // Validaciones
+        if (this.tituloJuego.value.trim() === "") {
+            e.preventDefault();
+            this.mostrarAlert("El título del juego es obligatorio", "error");
+            return;
+        }
+        
+        if (this.contadorSeleccionados !== 4) {
+            e.preventDefault();
+            this.mostrarAlert("Debes seleccionar exactamente 4 temas", "error");
+            return;
+        }
+        
+        // Actualizar input oculto con los temas seleccionados
+        this.temasInput.value = Array.from(this.temasSeleccionados).join(',');
+        
+        // Continuar con el envío normal (PHP procesará)
+        console.log("Enviando formulario con temas:", this.temasInput.value);
+    }
+    
 
     temaAccion(){
         this.style.backgroundColor = "blue";

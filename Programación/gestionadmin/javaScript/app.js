@@ -11,6 +11,8 @@ import { RegistroAdmin} from './views/registroAdmin.js';
 
 import { VmodificarProfesores } from './views/vmodificarProfesor.js';
 
+import { VPanelAdmin } from './views/VPanelAdmin.js';
+
 let page = document.body.id; //Toma el id del body de la pagina para hacer el switchs
 
 console.log("ID PAGINA:",page);
@@ -44,6 +46,10 @@ switch(page){
         const controladorM = new CAdmin(modeloM,modificarProfesores);
         controladorM.tomarAdministrador();
         console.log('Vista Modificar inicializando');
+        break;
+    case 'panelAdministrador':
+        console.log("HOLAAAA");
+        const vistaPA = new VPanelAdmin();
         break;
     default:
         console.log('Página no reconocida por la aplicación MVC');

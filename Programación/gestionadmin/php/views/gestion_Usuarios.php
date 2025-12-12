@@ -18,7 +18,7 @@
     <nav>
         <ul>
             <li><a href="index.php?controller=Administrador&action=panelAdministrador">Panel</a></li>
-            <li><a href="./php/views/creacion_Juegos.html">Crear juego</a></li>
+            <li><a href="./php/views/creacion_Juegos.php">Crear juego</a></li>
             <li><a href="index.php?controller=Administrador&action=listarAdministradores">Gestionar Usuarios</a></li>
             <li><a href="gestiontemas.html">Temas</a></li>
             <li><a href="gestion_Avatares.html">Avatares</a></li>

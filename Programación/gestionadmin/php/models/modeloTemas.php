@@ -78,5 +78,17 @@
 
             return $preparacion->execute(); /*BOOLEANO*/
         }
+        
+        function obtenerTemasParaJuego($idUsuario) {
+            $sql = "SELECT * FROM tema 
+                    WHERE publico = 1 OR idUsuario = :idUsuario 
+                    ORDER BY nombre";
+            
+            $preparacion = $this->conexion->prepare($sql);
+            $preparacion->bindValue(':idUsuario', (int)$idUsuario, PDO::PARAM_INT);
+            $preparacion->execute();
+            
+            return $preparacion->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 ?>

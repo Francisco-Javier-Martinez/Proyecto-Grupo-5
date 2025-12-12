@@ -61,18 +61,21 @@
 
         public function modificarAdministrador($id, $nombre, $email) {
             try {
+                
                 $sql = "UPDATE Usuarios SET nombre = ?, email = ? WHERE idUsuario = ?";
                 
                 $stmt = $this->conexion->prepare($sql);
-                $stmt->execute([$nombre, $email, $id]);
+                $success = $stmt->execute([$nombre, $email, $id]);
                 
-                if($stmt->rowCount()>0){
+                if ($success) {
                     return true;
-                }else{
-                    return "No se pudo modificar la pregunta";
+                } else {
+                    $errorInfo = $stmt->errorInfo();
+                    return "Error de BD: " . $errorInfo[2];
                 }
+                
             } catch (PDOException $e) {
-                return 'Code error: ' . $e->getCode() . ' Mensaje error: ' . $e->getMessage();
+                return 'Error: ' . $e->getMessage();
             }
         }
 
