@@ -1,0 +1,202 @@
+[
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "titulo": "¿En qué año comenzó la Revolución Francesa?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "La Revolución Francesa comenzó en 1789 con la Toma de la Bastilla el 14 de julio, marcando el inicio del fin del Antiguo Régimen."
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "titulo": "¿Entre qué años se desarrolló la Segunda Guerra Mundial?",
+    "imagen": "",
+    "puntuacion": 300,
+    "explicacion": "La Segunda Guerra Mundial ocurrió entre 1939 y 1945. Comenzó con la invasión alemana de Polonia y terminó con la rendición de Japón."
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "titulo": "¿En qué año Cristóbal Colón descubrió América?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "Cristóbal Colón llegó a América el 12 de octubre de 1492, desembarcando en la isla de Guanahaní (actual Bahamas)."
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "titulo": "¿Quiénes fueron, según la leyenda, los fundadores de Roma?",
+    "imagen": "",
+    "puntuacion": 250,
+    "explicacion": "Según la mitología romana, Rómulo y Remo, hijos de Marte y la sacerdotisa Rea Silvia, fueron amamantados por una loba y fundaron Roma."
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "titulo": "¿Qué río fue fundamental para la civilización del Antiguo Egipto?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "El río Nilo fue vital para Egipto porque sus inundaciones anuales depositaban limo fértil, permitiendo la agricultura en medio del desierto."
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "titulo": "¿Quién formuló la Ley de la Gravedad Universal?",
+    "imagen": "",
+    "puntuacion": 150,
+    "explicacion": "Isaac Newton formuló la Ley de Gravitación Universal en 1687, describiendo cómo todos los objetos con masa se atraen entre sí."
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "titulo": "¿Quién propuso la Teoría de la Evolución por selección natural?",
+    "imagen": "",
+    "puntuacion": 250,
+    "explicacion": "Charles Darwin publicó 'El origen de las especies' en 1859, proponiendo que las especies evolucionan mediante selección natural."
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "titulo": "¿Quién creó la Tabla Periódica de los elementos?",
+    "imagen": "",
+    "puntuacion": 300,
+    "explicacion": "Dmitri Mendeléyev organizó los elementos según sus propiedades químicas en 1869, dejando huecos para elementos aún no descubiertos."
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "titulo": "¿Cuál es la principal diferencia entre célula animal y vegetal?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "Las células vegetales tienen cloroplastos (para fotosíntesis) y pared celular rígida, mientras las animales no."
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "titulo": "¿Cuántos planetas hay en nuestro Sistema Solar?",
+    "imagen": "",
+    "puntuacion": 180,
+    "explicacion": "Hay 8 planetas en el Sistema Solar: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno. Plutón es considerado planeta enano."
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "titulo": "¿Quién escribió 'Don Quijote de la Mancha'?",
+    "imagen": "",
+    "puntuacion": 220,
+    "explicacion": "Miguel de Cervantes Saavedra publicó la primera parte de 'Don Quijote' en 1605, considerada la primera novela moderna."
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "titulo": "¿Qué autor es máximo representante del Realismo Mágico?",
+    "imagen": "",
+    "puntuacion": 280,
+    "explicacion": "Gabriel García Márquez, con 'Cien años de soledad' (1967), es el máximo exponente del Realismo Mágico latinoamericano."
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "titulo": "¿Cuál es la obra más famosa de William Shakespeare?",
+    "imagen": "",
+    "puntuacion": 300,
+    "explicacion": "'Hamlet' es considerada la obra cumbre de Shakespeare, escrita alrededor de 1600, famosa por el monólogo 'Ser o no ser'."
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "titulo": "¿Quién fue el poeta más destacado de la Generación del 27?",
+    "imagen": "",
+    "puntuacion": 240,
+    "explicacion": "Federico García Lorca es el poeta más célebre de la Generación del 27, fusilado en 1936 al inicio de la Guerra Civil española."
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "titulo": "¿Quién escribió la novela 'El nombre de la rosa'?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "Umberto Eco publicó 'El nombre de la rosa' en 1980, novela histórica y policíaca ambientada en un monasterio medieval."
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "titulo": "¿Qué representa una letra que puede tomar diferentes valores en álgebra?",
+    "imagen": "",
+    "puntuacion": 180,
+    "explicacion": "Una variable es un símbolo (normalmente una letra) que representa un valor desconocido o que puede variar en una expresión algebraica."
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "titulo": "¿Cuántos lados tiene un pentágono?",
+    "imagen": "",
+    "puntuacion": 220,
+    "explicacion": "Un pentágono tiene 5 lados. 'Penta' significa cinco en griego, y 'gono' significa ángulo."
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "titulo": "¿Cuál es la fórmula del Teorema de Pitágoras?",
+    "imagen": "",
+    "puntuacion": 150,
+    "explicacion": "a² + b² = c², donde c es la hipotenusa y a, b son los catetos de un triángulo rectángulo."
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "titulo": "¿Qué concepto matemático mide la tasa de cambio instantánea?",
+    "imagen": "",
+    "puntuacion": 350,
+    "explicacion": "La derivada mide cómo cambia una función en un punto específico, representando la pendiente de la recta tangente en ese punto."
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "titulo": "¿Qué medida estadística representa el valor promedio?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "La media o promedio se calcula sumando todos los valores y dividiendo entre el número total de observaciones."
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "titulo": "¿Cuál es la pintura más famosa de Leonardo da Vinci?",
+    "imagen": "",
+    "puntuacion": 250,
+    "explicacion": "La Mona Lisa o Gioconda, pintada entre 1503-1506, es famosa por su enigmática sonrisa y actualmente se exhibe en el Louvre."
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "titulo": "¿Qué movimiento artístico inició Pablo Picasso?",
+    "imagen": "",
+    "puntuacion": 300,
+    "explicacion": "Picasso, junto con Georges Braque, inició el Cubismo alrededor de 1907, representando objetos desde múltiples ángulos simultáneamente."
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "titulo": "¿Quién diseñó la Casa de la Cascada (Fallingwater)?",
+    "imagen": "",
+    "puntuacion": 280,
+    "explicacion": "Frank Lloyd Wright diseñó Fallingwater en 1935, integrando arquitectura orgánica con el entorno natural de Pensilvania."
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "titulo": "¿Quién compuso la Novena Sinfonía ('Coral')?",
+    "imagen": "",
+    "puntuacion": 220,
+    "explicacion": "Ludwig van Beethoven compuso su Novena Sinfonía en 1824, notable por incluir coros y por el 'Himno a la Alegría' en el cuarto movimiento."
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "titulo": "¿Quién dirigió la película 'Origen' (Inception)?",
+    "imagen": "",
+    "puntuacion": 200,
+    "explicacion": "Christopher Nolan dirigió 'Inception' en 2010, película de ciencia ficción que explora los sueños dentro de sueños."
+  }
+]

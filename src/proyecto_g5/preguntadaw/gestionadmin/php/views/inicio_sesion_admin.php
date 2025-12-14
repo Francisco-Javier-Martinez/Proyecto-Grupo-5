@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio de sesión administrador</title>
+        <link rel="stylesheet" href="./php/views/css/jc.css">
+    </head>
+    <body id="loginAdmin">
+        <header>
+            <a href="index.php?controller=Juego&action=listarJuegos">
+                <img id="logo" src="php/views/img/preguntadawLogo.png" alt="Logo preguntadaw">
+            </a>
+            <h1>Preguntadaw</h1>
+        </header>
+        <main>
+            <form action="./index.php?action=iniciarSesion&controller=Administrador" method="post">
+                <h1>INICIO DE SESION</h1>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email">
+                <label for="password">Contraseña: </label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value ="Acceder">
+                <?php 
+                    if(isset($mensajeError)){
+                        echo "<h3>".$mensajeError."</h3>";
+                    }
+                ?>
+            </form>
+            
+        </main>
+        <footer>
+            <h3>Escuela Virgen de Guadalupe - © Todos los derechos reservados</h3>
+        </footer>
+        <script type="module" src="javaScript/controllers/controller.js"></script>
+    </body>
+</html>

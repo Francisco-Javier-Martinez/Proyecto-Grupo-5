@@ -1,0 +1,702 @@
+[
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "1789",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "1776",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "1784",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "1771",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "1939-1945",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "1914-1918",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "c",
+    "texto": "1941-1945",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 2,
+    "nLetra": "d",
+    "texto": "1935-1943",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "nLetra": "a",
+    "texto": "1492",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "nLetra": "b",
+    "texto": "1502",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "nLetra": "c",
+    "texto": "1488",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 3,
+    "nLetra": "d",
+    "texto": "1510",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "nLetra": "a",
+    "texto": "Rómulo y Remo",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "nLetra": "b",
+    "texto": "Julio César y Augusto",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "nLetra": "c",
+    "texto": "Aníbal y Escipión",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 4,
+    "nLetra": "d",
+    "texto": "Constantino y Justiniano",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "nLetra": "a",
+    "texto": "El Nilo",
+    "es_correcta": true
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "nLetra": "b",
+    "texto": "El Tigris",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "nLetra": "c",
+    "texto": "El Éufrates",
+    "es_correcta": false
+  },
+  {
+    "idTema": 1,
+    "nPregunta": 5,
+    "nLetra": "d",
+    "texto": "El Amazonas",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "Isaac Newton",
+    "es_correcta": true
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "Albert Einstein",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "Galileo Galilei",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "Stephen Hawking",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "Charles Darwin",
+    "es_correcta": true
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "Gregor Mendel",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "nLetra": "c",
+    "texto": "Louis Pasteur",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 2,
+    "nLetra": "d",
+    "texto": "Alfred Wallace",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "nLetra": "a",
+    "texto": "Dmitri Mendeléyev",
+    "es_correcta": true
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "nLetra": "b",
+    "texto": "Marie Curie",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "nLetra": "c",
+    "texto": "Antoine Lavoisier",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 3,
+    "nLetra": "d",
+    "texto": "John Dalton",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "nLetra": "a",
+    "texto": "La célula vegetal tiene cloroplastos",
+    "es_correcta": true
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "nLetra": "b",
+    "texto": "La célula animal es más grande",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "nLetra": "c",
+    "texto": "La célula vegetal no tiene núcleo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 4,
+    "nLetra": "d",
+    "texto": "La célula animal tiene pared celular",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "nLetra": "a",
+    "texto": "8",
+    "es_correcta": true
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "nLetra": "b",
+    "texto": "7",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "nLetra": "c",
+    "texto": "9",
+    "es_correcta": false
+  },
+  {
+    "idTema": 2,
+    "nPregunta": 5,
+    "nLetra": "d",
+    "texto": "6",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "Miguel de Cervantes",
+    "es_correcta": true
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "Lope de Vega",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "Francisco de Quevedo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "Calderón de la Barca",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "Gabriel García Márquez",
+    "es_correcta": true
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "Jorge Luis Borges",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "nLetra": "c",
+    "texto": "Mario Vargas Llosa",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 2,
+    "nLetra": "d",
+    "texto": "Julio Cortázar",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "nLetra": "a",
+    "texto": "Hamlet",
+    "es_correcta": true
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "nLetra": "b",
+    "texto": "Don Quijote",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "nLetra": "c",
+    "texto": "La Divina Comedia",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 3,
+    "nLetra": "d",
+    "texto": "Cien años de soledad",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "nLetra": "a",
+    "texto": "Federico García Lorca",
+    "es_correcta": true
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "nLetra": "b",
+    "texto": "Antonio Machado",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "nLetra": "c",
+    "texto": "Juan Ramón Jiménez",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 4,
+    "nLetra": "d",
+    "texto": "Vicente Aleixandre",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "nLetra": "a",
+    "texto": "El nombre de la rosa",
+    "es_correcta": true
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "nLetra": "b",
+    "texto": "Rayuela",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "nLetra": "c",
+    "texto": "La ciudad y los perros",
+    "es_correcta": false
+  },
+  {
+    "idTema": 3,
+    "nPregunta": 5,
+    "nLetra": "d",
+    "texto": "Pedro Páramo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "Variable",
+    "es_correcta": true
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "Constante",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "Coeficiente",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "Término",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "5",
+    "es_correcta": true
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "4",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "nLetra": "c",
+    "texto": "3",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 2,
+    "nLetra": "d",
+    "texto": "Infinita",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "nLetra": "a",
+    "texto": "a² + b² = c²",
+    "es_correcta": true
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "nLetra": "b",
+    "texto": "E = mc²",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "nLetra": "c",
+    "texto": "πr²",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 3,
+    "nLetra": "d",
+    "texto": "F = ma",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "nLetra": "a",
+    "texto": "Derivada",
+    "es_correcta": true
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "nLetra": "b",
+    "texto": "Integral",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "nLetra": "c",
+    "texto": "Límite",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 4,
+    "nLetra": "d",
+    "texto": "Función",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "nLetra": "a",
+    "texto": "Promedio",
+    "es_correcta": true
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "nLetra": "b",
+    "texto": "Moda",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "nLetra": "c",
+    "texto": "Mediana",
+    "es_correcta": false
+  },
+  {
+    "idTema": 4,
+    "nPregunta": 5,
+    "nLetra": "d",
+    "texto": "Desviación estándar",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "nLetra": "a",
+    "texto": "La Mona Lisa",
+    "es_correcta": true
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "nLetra": "b",
+    "texto": "La última cena",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "nLetra": "c",
+    "texto": "El grito",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 1,
+    "nLetra": "d",
+    "texto": "Guernica",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "nLetra": "a",
+    "texto": "Cubismo",
+    "es_correcta": true
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "nLetra": "b",
+    "texto": "Impresionismo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "nLetra": "c",
+    "texto": "Surrealismo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 2,
+    "nLetra": "d",
+    "texto": "Expresionismo",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "nLetra": "a",
+    "texto": "Frank Lloyd Wright",
+    "es_correcta": true
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "nLetra": "b",
+    "texto": "Le Corbusier",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "nLetra": "c",
+    "texto": "Mies van der Rohe",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 3,
+    "nLetra": "d",
+    "texto": "Antoni Gaudí",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "nLetra": "a",
+    "texto": "Ludwig van Beethoven",
+    "es_correcta": true
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "nLetra": "b",
+    "texto": "Wolfgang Amadeus Mozart",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "nLetra": "c",
+    "texto": "Johann Sebastian Bach",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 4,
+    "nLetra": "d",
+    "texto": "Frédéric Chopin",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "nLetra": "a",
+    "texto": "Christopher Nolan",
+    "es_correcta": true
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "nLetra": "b",
+    "texto": "Steven Spielberg",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "nLetra": "c",
+    "texto": "Martin Scorsese",
+    "es_correcta": false
+  },
+  {
+    "idTema": 5,
+    "nPregunta": 5,
+    "nLetra": "d",
+    "texto": "Quentin Tarantino",
+    "es_correcta": false
+  }
+]

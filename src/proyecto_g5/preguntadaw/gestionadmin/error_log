@@ -1,0 +1,28 @@
+[14-Dec-2025 02:18:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'abreviatura' at row 1 in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php:32
+Stack trace:
+#0 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php(32): PDOStatement->execute()
+#1 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/controllers/cTemas.php(51): ModeloTemas->crearTema('sadsadsadsadsad...', 1, 'dasdsadsadsadsa...', 'sadsadsadasdsad...', '23')
+#2 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/index.php(28): CTemas->introducirTemas()
+#3 {main}
+  thrown in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php on line 32
+[14-Dec-2025 02:23:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'abreviatura' at row 1 in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php:32
+Stack trace:
+#0 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php(32): PDOStatement->execute()
+#1 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/controllers/cTemas.php(51): ModeloTemas->crearTema('Kendbskskska', 0, 'Lslslalakansbdn...', 'Jdkskaoaoakabsb...', '23')
+#2 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/index.php(28): CTemas->introducirTemas()
+#3 {main}
+  thrown in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php on line 32
+[14-Dec-2025 02:23:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'abreviatura' at row 1 in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php:32
+Stack trace:
+#0 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php(32): PDOStatement->execute()
+#1 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/controllers/cTemas.php(51): ModeloTemas->crearTema('Jeksianabalakqb...', 1, 'Nanalana jsiska...', 'Jsisjsbsjdidisb...', '23')
+#2 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/index.php(28): CTemas->introducirTemas()
+#3 {main}
+  thrown in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php on line 32
+[14-Dec-2025 03:08:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'abreviatura' at row 1 in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php:32
+Stack trace:
+#0 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php(32): PDOStatement->execute()
+#1 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/controllers/cTemas.php(51): ModeloTemas->crearTema('Hugugugugug', 1, 'Ugugugugugugv', 'Igihigugugugu', '23')
+#2 /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/index.php(28): CTemas->introducirTemas()
+#3 {main}
+  thrown in /home/daw/public_html/24.daw.esvirgua.com/unificado_finalP1/preguntadaw/gestionadmin/php/models/modeloTemas.php on line 32

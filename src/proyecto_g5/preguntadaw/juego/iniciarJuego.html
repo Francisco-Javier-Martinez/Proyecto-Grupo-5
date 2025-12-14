@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/jugadorT.css">
+    <title>PreguntADAW</title>
+</head>
+<body id="inicioJugador">
+    <header>
+        <img src="imagenes/preguntadawLogo.png" class="logo-principal">
+        <h1>PREGUNTADAW</h1>
+    </header>
+
+    <main class="avatares">
+        <h2>AVATARES</h2>
+        <div id="avatares">
+            
+        </div>
+
+        <form id="formInicio" method="get" >
+            <p>INTRODUCE NOMBRE DE JUGADOR</p>
+            <input type="text" id="jugadorNombre" name="nombre" placeholder="Escribe tu nombre">
+            <!-- Parámetros para el enrutador  del js
+             hemos tenido que poner esto aquí porque si no no los enviaba-->
+            <input type="hidden" name="controller" value="Jugador">
+            <input type="hidden" name="action" value="guardarJugador">
+            <!--  -->
+            <input type="hidden" id="idAvatarInput" name="idAvatar" value="">
+            <button type="button" id="entrar">ENTRAR</button>
+        </form>
+        
+    </main>
+
+    <footer>
+        Derechos reservados a la Escuela Virgen de Guadalupe
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
